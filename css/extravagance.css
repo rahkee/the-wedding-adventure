@@ -1,0 +1,108 @@
+:root {
+    --black: #111;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--black);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.4rem;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+}
+
+.main-nav-container {
+    position: fixed;
+    z-index: 9999;
+}
+
+.menu-btn {
+    color: white;
+    padding: 16px;
+}
+
+.circle-icon, .menu-btn p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.circle-icon {
+    border: 3px solid white;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+}
+
+.menu-btn p {
+    font-size: 1.8rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.main-nav {
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 96px - 48px);
+    padding: 96px 48px 48px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(100% - 96px);
+}
+
+.main-nav-btn {
+    color: white;
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 300;
+    opacity: .7;
+    transition-property: opacity;
+    transition-duration: .25s;
+    transition-timing-function: ease-in;
+    width: 100%;
+}
+
+.main-nav-btn:hover {
+    opacity: 1;
+}
+
+hr {
+    border: none;
+    border-top: 1px #333 solid;
+    width: 100%;
+}
+
+.home {
+    background-image: url('../web/Alexis and Ray Engagement_Websize-010.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    width: 100vw;
+}
+
+.home.blur {
+    filter: blur(5px);
+}
+
+.home.blur .home-header {
+    opacity: 0;
+}
+
+.home-header {
+    color: white;
+    font-size: 4.8rem;
+    margin: auto;
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: .25s;
+    transition-timing-function: ease-in;
+    width: 80%;
+}
