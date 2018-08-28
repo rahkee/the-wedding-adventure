@@ -4,6 +4,7 @@
   "description": "The adventure of a lifetime!",
   "main": "index.js",
   "dependencies": {
+    "browsersync": "0.0.1-security",
     "eslint": "^5.4.0"
   },
   "devDependencies": {},
