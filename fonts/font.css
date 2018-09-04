@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'AdleryPro-Swash';
+  src: url('AdleryPro-Swash.woff') format('woff'),
+       url('AdleryPro-Swash.ttf') format('truetype'),
+       url('AdleryPro-Swash.svg#AdleryPro-Swash') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'adlery-pro.swash';
+  src: url('adlery-pro.swash.eot');
+  src: url('adlery-pro.swash.woff2') format('woff2'),
+       url('adlery-pro.swash.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
