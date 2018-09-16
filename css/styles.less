@@ -117,18 +117,21 @@ button {
 .icon-label {
     align-items: center;
     display: flex;
-    padding: 6px 24px;
+    padding: 12px 24px;
 
     .fas, .far, .fab {
         font-size: 3.6rem;
-        margin-right: 12px;
+        margin-right: 16px;
+        text-align: right;
+        width: 48px;
     }
 
     .icon-text {
+        font-size: 1.6rem;
+        line-height: 1.5;
 
         strong, em {
             display: block;
-            font-size: 1.8rem;
         }
     }
 }
@@ -160,14 +163,21 @@ button {
     }
 
     article {
-        align-items: center;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         margin: 24px auto;
 
         .content-block {
-            padding: 0 48px;
+            padding: 48px 48px 0;
             grid-column: span 6;
+
+            header {
+                margin-top: 96px;
+
+                &:first-of-type {
+                    margin-top: 0;
+                }
+            }
 
             h4 {
                 font-weight: 300;
@@ -181,6 +191,7 @@ button {
         .image-block {
             display: grid;
             grid-column: span 6;
+            grid-gap: 8px;
             grid-template-columns: repeat(6, 1fr);
 
             .span-full {

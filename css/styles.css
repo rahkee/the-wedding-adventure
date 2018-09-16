@@ -93,18 +93,23 @@ button {
 .icon-label {
   align-items: center;
   display: flex;
-  padding: 6px 24px;
+  padding: 12px 24px;
 }
 .icon-label .fas,
 .icon-label .far,
 .icon-label .fab {
   font-size: 3.6rem;
-  margin-right: 12px;
+  margin-right: 16px;
+  text-align: right;
+  width: 48px;
+}
+.icon-label .icon-text {
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 .icon-label .icon-text strong,
 .icon-label .icon-text em {
   display: block;
-  font-size: 1.8rem;
 }
 .page-header {
   background-size: cover;
@@ -126,14 +131,19 @@ button {
   margin: 36px auto 0;
 }
 .page-body article {
-  align-items: center;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   margin: 24px auto;
 }
 .page-body article .content-block {
-  padding: 0 48px;
+  padding: 48px 48px 0;
   grid-column: span 6;
+}
+.page-body article .content-block header {
+  margin-top: 96px;
+}
+.page-body article .content-block header:first-of-type {
+  margin-top: 0;
 }
 .page-body article .content-block h4 {
   font-weight: 300;
@@ -144,6 +154,7 @@ button {
 .page-body article .image-block {
   display: grid;
   grid-column: span 6;
+  grid-gap: 8px;
   grid-template-columns: repeat(6, 1fr);
 }
 .page-body article .image-block .span-full {
