@@ -1,0 +1,176 @@
+@font-face {
+  font-family: 'Adlery Pro';
+  src: url('/fonts/adlery-pro.swash.eot');
+  /* IE9 Compat Modes */
+  src: url('/fonts/adlery-pro.swash.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('/fonts/adlery-pro.swash.woff2') format('woff2'), /* Super Modern Browsers */ url('/fonts/AdleryPro-Swash.woff') format('woff'), /* Pretty Modern Browsers */ url('/fonts/AdleryPro-Swash.ttf') format('truetype'), /* Safari, Android, iOS */ url('/fonts/AdleryPro-Swash.svg#svgFontName') format('svg');
+  /* Legacy iOS */
+}
+/* Colors */
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #d5d6d0;
+  font-size: 1.4rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Adlery Pro', serif;
+}
+h1 {
+  font-size: 7.2rem;
+}
+h2,
+h3,
+h4,
+h6 {
+  text-align: center;
+}
+h2 {
+  font-size: 4.8rem;
+}
+h3 {
+  font-size: 3.6rem;
+}
+h4,
+h5,
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+h4,
+p {
+  font-weight: 300;
+}
+h6 {
+  font-size: 2.4rem;
+}
+p {
+  margin-bottom: 20px;
+  margin-top: 0;
+  max-width: 480px;
+}
+p.small {
+  font-size: 1.4rem;
+}
+a {
+  color: #a85213;
+  font-weight: 400;
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+button {
+  background-color: transparent;
+  border: 0;
+}
+.divider {
+  display: flex;
+  margin: 60px auto;
+  max-width: 480px;
+  width: 60%;
+}
+.divider .fas {
+  color: #b5b6b1;
+  margin: 0 12px;
+}
+.divider hr {
+  border-top: 1px #b5b6b1 solid;
+  flex: auto;
+}
+.icon-label {
+  align-items: center;
+  display: flex;
+  padding: 6px 24px;
+}
+.icon-label .fas,
+.icon-label .far,
+.icon-label .fab {
+  font-size: 3.6rem;
+  margin-right: 12px;
+}
+.icon-label .icon-text strong,
+.icon-label .icon-text em {
+  display: block;
+  font-size: 1.8rem;
+}
+.page-header {
+  background-size: cover;
+  color: #eee;
+  height: 80vh;
+  display: flex;
+}
+.page-header header {
+  margin: auto;
+  text-align: center;
+}
+.page-header header h3 {
+  font-weight: 300;
+}
+.page-body {
+  padding: 60px 0;
+}
+.page-body header p {
+  margin: 36px auto 0;
+}
+.page-body article {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 24px auto;
+}
+.page-body article .content-block {
+  padding: 0 48px;
+  grid-column: span 6;
+}
+.page-body article .content-block h4 {
+  font-weight: 300;
+}
+.page-body article .content-block .divider {
+  margin: 24px auto;
+}
+.page-body article .image-block {
+  display: grid;
+  grid-column: span 6;
+  grid-template-columns: repeat(6, 1fr);
+}
+.page-body article .image-block .span-full {
+  grid-column: span 6;
+}
+.page-body article .image-block .span-half {
+  grid-column: span 3;
+}
+/* Home */
+.home {
+  display: none;
+}
+.home .page-header {
+  background-image: url('/images/alexis-ray-engagement-29.jpg');
+  background-position: center center;
+  height: 100vh;
+}
+/* Wedding Schedule */
+.wedding-schedule {
+  display: none;
+}
+.wedding-schedule .page-header {
+  background-image: url('/images/alexis-ray-engagement-49.jpg');
+  background-position-y: 100%;
+}
+/* Accommodations */
+.accommodations .page-header {
+  background-image: url('/images/alexis-ray-engagement-29.jpg');
+  background-position-y: 100%;
+}
