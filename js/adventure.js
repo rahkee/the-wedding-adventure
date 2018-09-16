@@ -1,36 +1,56 @@
-window.addEventListener('click', (e) => {
+document.onreadystatechange = () => {
 
-    let dataAttributeName = e.target.dataset.attributeName;
+    if (document.readyState === 'complete') {
 
-    if (dataAttributeName === 'home') {
-        console.log("Load Home!");
+        // Get all buttons
+        const navButtons = document.querySelectorAll('button');
+
+        // Add a listener to all buttons
+        navButtons.forEach(button => {
+            button.addEventListener('click', showPage);
+        });
+
+        // Get all main elements
+        const mainElements = document.querySelectorAll('main');
+
+        // Hide all main elements
+        mainElements.forEach(mainElement => {
+            mainElement.classList.remove('show');
+            mainElement.classList.add('delete');
+        })
+
+        // Show the home page
+        const homePage = document.querySelector('.home');
+        homePage.classList.remove('delete');
+        homePage.classList.add('show');
     }
 
-    if (dataAttributeName === 'lodging') {
-        console.log("Load Lodging!");
-    }
+};
 
-    if (dataAttributeName === 'getting-there') {
-        console.log("Load Getting There!");
-    }
+function showPage (e) {
+    // Get the button attribute name and convert it to string (".class")
+    const elementClass = '.' + e.target.dataset.attributeName;
 
-    if (dataAttributeName === 'book-your-adventure') {
-        console.log("Load Book!");
-    }
+    // Find the main element to show using the (".class")
+    const visibleMainElement = document.querySelector(elementClass);
 
-    if (dataAttributeName === 'schedule') {
-        console.log("Load Schedule!");
-    }
+    // Get all main elements
+    const mainElements = document.querySelectorAll('main');
 
-    if (dataAttributeName === 'gallery') {
-        console.log("Load Gallery!");
-    }
+    TODO
 
-    if (dataAttributeName === 'contact-us') {
-        console.log("Load Contact Us!");
-    }
+    // Hide all main elements
+    mainElements.forEach(mainElement => {
+        setTimeout(() => {
+            mainElement.classList.add('delete');
+        }, 100);
 
-    if (dataAttributeName === 'faqs') {
-        console.log("Load FAQs!");
-    }
-})
+        mainElement.classList.remove('show');
+    })
+
+    setTimeout(() => {
+        visibleMainElement.classList.add('show');
+    }, 100);
+
+    visibleMainElement.classList.remove('delete');
+}

@@ -124,11 +124,11 @@ button {
 .main-nav button {
   color: #b5b6b1;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: normal;
-  padding: 24px 0;
-  transition-duration: .24s;
-  transition-timing-function: ease-out;
+  padding: 24px 12px;
+  transition-duration: 0.33s;
+  transition-timing-function: ease-in-out;
   transition-property: color;
 }
 .main-nav button:hover {
@@ -186,19 +186,22 @@ button {
 .page-body article .image-block .span-half {
   grid-column: span 3;
 }
-/* Home */
-.home {
-  display: none;
+.page {
+  position: absolute;
+  opacity: 0;
+  transition-duration: 0.33s;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.99s;
+  transition-property: opacity;
+  width: 100%;
 }
+/* Home */
 .home .page-header {
   background-image: url('/images/alexis-ray-engagement-29.jpg');
   background-position: center center;
   height: 100vh;
 }
 /* Wedding Schedule */
-.wedding-schedule {
-  display: none;
-}
 .wedding-schedule .page-header {
   background-image: url('/images/alexis-ray-engagement-49.jpg');
   background-position-y: 100%;
@@ -207,4 +210,10 @@ button {
 .accommodations .page-header {
   background-image: url('/images/alexis-ray-engagement-29.jpg');
   background-position-y: 100%;
+}
+.show {
+  opacity: 1;
+}
+.delete {
+  display: none;
 }
