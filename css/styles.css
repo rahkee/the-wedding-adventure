@@ -103,13 +103,36 @@ button {
   text-align: right;
   width: 48px;
 }
+.icon-label .fa-exclamation-triangle {
+  color: #a85213;
+}
 .icon-label .icon-text {
   font-size: 1.6rem;
+  font-weight: 300;
   line-height: 1.5;
 }
 .icon-label .icon-text strong,
 .icon-label .icon-text em {
   display: block;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.main-nav {
+  display: flex;
+  justify-content: space-around;
+}
+.main-nav button {
+  color: #b5b6b1;
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: normal;
+  padding: 24px 0;
+  transition-duration: .24s;
+  transition-timing-function: ease-out;
+  transition-property: color;
+}
+.main-nav button:hover {
+  color: #a85213;
 }
 .page-header {
   background-size: cover;

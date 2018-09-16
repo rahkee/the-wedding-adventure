@@ -19,9 +19,13 @@
     font-family: 'Adlery Pro', serif;
 }
 
-
 .reading-font() {
     font-family: 'Josefin Sans', sans-serif;
+}
+
+.transition() {
+    transition-duration: .24s;
+    transition-timing-function: ease-out;
 }
 
 html {
@@ -126,12 +130,38 @@ button {
         width: 48px;
     }
 
+    .fa-exclamation-triangle {
+        color: @highlight;
+    }
+
     .icon-text {
         font-size: 1.6rem;
+        font-weight: 300;
         line-height: 1.5;
 
         strong, em {
             display: block;
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+    }
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-around;
+
+    button {
+        color: @dark-beige;
+        cursor: pointer;
+        font-size: 2rem;
+        line-height: normal;
+        padding: 24px 0;
+        .transition;
+        transition-property: color;
+
+        &:hover {
+            color: @highlight
         }
     }
 }
