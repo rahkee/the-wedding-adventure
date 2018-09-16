@@ -31,17 +31,23 @@ html {
 body {
     background-color: @beige;
     font-size: 1.4rem;
-    line-height: 1.5;
     .reading-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
 }
 
 h1, h2, h3 {
     .heading-font;
-    margin: 0;
 }
 
 h1 {
     font-size: 7.2rem;
+}
+
+h2, h3, h4, h6 {
+    text-align: center;
 }
 
 h2 {
@@ -52,11 +58,38 @@ h3 {
     font-size: 3.6rem;
 }
 
-p {
+h4, h5, p {
     font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+h4, p {
     font-weight: 300;
-    margin: 0;
+}
+
+h6 {
+    font-size: 2.4rem;
+}
+
+p {
+    margin-bottom: 20px;
+    margin-top: 0;
     max-width: 480px;
+
+    &.small {
+        font-size: 1.4rem;
+    }
+}
+
+a {
+    color: @highlight;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 button {
@@ -66,9 +99,9 @@ button {
 
 .divider {
     display: flex;
-    margin: 36px auto;
+    margin: 60px auto;
     max-width: 480px;
-    width: 72%;
+    width: 50%;
 
     .fas {
         color: @dark-beige;
@@ -81,10 +114,25 @@ button {
     }
 }
 
+.icon-label {
+    align-items: center;
+    display: flex;
+    padding: 12px;
+
+    .fas, .far, .fab {
+        font-size: 3.6rem;
+        margin-right: 8px;
+    }
+
+    .icon-text {
+        font-size: 1.8rem;
+    }
+}
+
 .page-header {
     background-size: cover;
     color: @white;
-    height: 100vh;
+    height: 80vh;
     display: flex;
 
     header {
@@ -98,37 +146,72 @@ button {
 }
 
 .page-body {
-    padding: 36px;
+    padding: 60px 0;
 
     header {
 
-        h2 {
-            text-align: center;
+        p {
+            margin: 36px auto 0;
+        }
+    }
+
+    article {
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        margin: 24px auto;
+
+        .content-block {
+            padding: 0 48px;
+            grid-column: span 6;
+
+            h4 {
+                font-weight: 300;
+            }
+
+            .divider {
+                margin: 24px auto;
+            }
         }
 
-        p {
-            margin: 0 auto;
+        .image-block {
+            display: grid;
+            grid-column: span 6;
+            grid-template-columns: repeat(6, 1fr);
         }
     }
 }
 
-/* HOME */
+/* Home */
 .home {
     display: none;
 
-    .section-header {
+    .page-header {
         background-image: url('/images/alexis-ray-engagement-29.jpg');
+        background-position: center center;
+        height: 100vh;
     }
 }
 
+/* Wedding Schedule */
 .wedding-schedule {
+    display: none;
 
-    .section-header {
+    .page-header {
         background-image: url('/images/alexis-ray-engagement-49.jpg');
+        background-position-y: 100%;
     }
 }
 
+/* Accommodations */
+.accommodations {
+    // display: none;
 
+    .page-header {
+        background-image: url('/images/alexis-ray-engagement-29.jpg');
+        background-position-y: 100%;
+    }
+}
 
 // .mobile-nav-container {
 //     position: fixed;
