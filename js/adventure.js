@@ -1,6 +1,7 @@
 document.onreadystatechange = () => {
 
     if (document.readyState === 'complete') {
+
         const navButtons = document.querySelectorAll('button');
 
         navButtons.forEach(button => {
@@ -15,17 +16,10 @@ document.onreadystatechange = () => {
     }
 };
 
-function showPage (evt) {
-    const elementClass = '.' + evt.target.dataset.attributeName;
+function showPage (e) {
+
+    const elementClass = '.' + e.target.dataset.attributeName;
     const visibleMainElement = document.querySelector(elementClass);
-
-    hideAllMainElements();
-      
-    visibleMainElement.classList.remove('delete');
-    visibleMainElement.classList.add('show');
-}
-
-function hideAllMainElements() {
     const mainElements = document.querySelectorAll('main');
 
     mainElements.forEach(mainElement => {
@@ -38,5 +32,17 @@ function hideAllMainElements() {
             }, 400);
             // TODO: Convert milliseconds to stylesheet var
         }
+    })
+
+    visibleMainElement.classList.remove('delete');
+    visibleMainElement.classList.add('show');
+}
+
+function hideAllMainElements() {
+    const mainElements = document.querySelectorAll('main');
+
+    mainElements.forEach(mainElement => {
+        mainElement.classList.remove('show');
+        mainElement.classList.add('delete');
     })
 }
