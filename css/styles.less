@@ -241,9 +241,19 @@ button {
     position: absolute;
     opacity: 0;
     .transition;
-    transition-duration: @seconds * 3;
     transition-property: opacity;
     width: 100%;
+
+    &.show {
+        opacity: 1;
+        transition-duration: 1s;
+    }
+    
+    &.delete {
+        height: 0;
+        overflow: hidden;
+        pointer-events: none;
+    }
 }
 
 /* Home */
@@ -272,14 +282,6 @@ button {
         background-image: url('/images/alexis-ray-engagement-29.jpg');
         background-position-y: 100%;
     }
-}
-
-.show {
-    opacity: 1
-}
-
-.delete {
-    display: none;
 }
 
 // .mobile-nav-container {
