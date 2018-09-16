@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Adlery Pro';
+    src: url('/fonts/adlery-pro.swash.eot'); /* IE9 Compat Modes */
+    src: url('/fonts/adlery-pro.swash.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/fonts/adlery-pro.swash.woff2') format('woff2'), /* Super Modern Browsers */
+    url('/fonts/AdleryPro-Swash.woff') format('woff'), /* Pretty Modern Browsers */
+    url('/fonts/AdleryPro-Swash.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('/fonts/AdleryPro-Swash.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+/* Colors */
+@black: #111;
+@white: #eee;
+@beige: #d5d6d0;
+@highlight: #a85213;
+
+.heading-font() {
+    font-family: 'Adlery Pro', serif;
+}
+
+
+.reading-font() {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: @black;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.4rem;
+}
+
+h1, h2, .swash {
+    font-family: 'Adlery Pro', serif;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+}
+
+.header-section {
+    background-image: url('../web/Alexis and Ray Engagement_Websize-010.jpg');
+    background-size: cover;
+    color: @white;
+    height: 100vh;
+    display: flex;
+    width: 100vw; 
+
+    &.blur {
+        filter: blur(5px);
+
+        .home-header {
+            opacity: 0;
+        }
+    }
+}
+
+.home {
+   
+}
+
+// .mobile-nav-container {
+//     position: fixed;
+//     z-index: 9999;
+    
+//     .menu-btn {
+//         color: white;
+//         padding: 16px;
+//     }
+    
+//     .circle-icon, .menu-btn p {
+//         display: inline-block;
+//         vertical-align: middle;
+//     }
+    
+//     .circle-icon {
+//         border: 3px solid white;
+//         border-radius: 50%;
+//         height: 24px;
+//         width: 24px;
+//     }
+    
+//     .menu-btn p {
+//         font-size: 1.8rem;
+//         margin: 0;
+//         text-transform: uppercase;
+//     }
+
+// }
+
+// .mobile-nav {
+//     background-color: rgba(0, 0, 0, .75);
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     height: ~"calc(100% - 96px - 48px)";
+//     padding: 96px 48px 48px;
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     width: ~"calc(100% - 96px)";
+// }
+
+// .mobile-nav-btn {
+//     color: white;
+//     display: block;
+//     font-size: 2.4rem;
+//     font-weight: 300;
+//     opacity: .7;
+//     transition-property: opacity;
+//     transition-duration: .25s;
+//     transition-timing-function: ease-in;
+//     width: 100%;
+// }
+
+// .mobile-nav-btn:hover {
+//     opacity: 1;
+// }
+
+// hr {
+//     border: none;
+//     border-top: 1px #333 solid;
+//     width: 100%;
+// }
