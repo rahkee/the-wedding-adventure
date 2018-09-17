@@ -135,10 +135,11 @@ button {
   color: #a85213;
 }
 .page-header {
+  background-position: center center;
   background-size: cover;
   color: #eee;
-  height: 80vh;
   display: flex;
+  height: 64vw;
 }
 .page-header header {
   margin: auto;
@@ -159,8 +160,16 @@ button {
   margin: 24px auto;
 }
 .page-body article .content-block {
-  padding: 48px 48px 0;
+  padding: 24px 48px;
+}
+.page-body article .content-block.span-full {
+  grid-column: span 12;
+}
+.page-body article .content-block.span-half {
   grid-column: span 6;
+}
+.page-body article .content-block.span-thirds {
+  grid-column: span 4;
 }
 .page-body article .content-block header {
   margin-top: 96px;
@@ -203,44 +212,30 @@ button {
   overflow: hidden;
   pointer-events: none;
 }
-/* Home */
 .home .page-header {
   background-image: url('/images/alexis-ray-engagement-29.jpg');
-  background-position: center center;
-  height: 100vh;
 }
-/* Accommodations */
 .accommodations .page-header {
   background-image: url('/images/alexis-ray-engagement-29.jpg');
-  background-position-y: 100%;
 }
-/* Accommodations */
 .getting-there .page-header {
   background-image: url('/images/alexis-ray-engagement-29.jpg');
-  background-position-y: 100%;
 }
-/* Accommodations */
+.things-to-do .page-header {
+  background-image: url('/images/alexis-ray-engagement-29.jpg');
+}
 .book-your-adventure .page-header {
   background-image: url('/images/alexis-ray-engagement-29.jpg');
-  background-position-y: 100%;
 }
-/* Wedding Schedule */
 .wedding-schedule .page-header {
   background-image: url('/images/alexis-ray-engagement-49.jpg');
-  background-position-y: 100%;
 }
-/* Accommodations */
 .gallery .page-header {
-  background-image: url('/images/alexis-ray-engagement-29.jpg');
-  background-position-y: 100%;
+  background-image: url('/images/alexis-ray-engagement-32.jpg');
 }
-/* Accommodations */
 .contact-us .page-header {
-  background-image: url('/images/alexis-ray-engagement-29.jpg');
-  background-position-y: 100%;
+  background-image: url('/images/alexis-ray-engagement-102.jpg');
 }
-/* Accommodations */
 .faqs .page-header {
-  background-image: url('/images/alexis-ray-engagement-29.jpg');
-  background-position-y: 100%;
+  background-image: url('/images/alexis-ray-engagement-66.jpg');
 }
