@@ -46,7 +46,6 @@ h3 {
 h4,
 h5,
 p {
-  font-size: 1.6rem;
   line-height: 1.5;
 }
 h4,
@@ -64,6 +63,10 @@ p {
 p.small {
   font-size: 1.4rem;
 }
+p button {
+  color: #a85213;
+  font-weight: 400;
+}
 a {
   color: #a85213;
   font-weight: 400;
@@ -77,6 +80,8 @@ button {
   background-color: transparent;
   border: 0;
   cursor: pointer;
+  font-weight: 300;
+  padding: 0;
 }
 .divider {
   display: flex;
@@ -109,21 +114,18 @@ button {
   color: #a85213;
 }
 .icon-label .icon-text {
-  font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.5;
 }
 .icon-label .icon-text strong,
 .icon-label .icon-text em {
   display: block;
-  font-size: 1.6rem;
   font-weight: 400;
 }
 .main-nav {
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-wrap: wrap;
-  font-size: 1.6rem;
   justify-content: space-between;
   position: fixed;
   width: 100%;
@@ -161,7 +163,7 @@ button {
   font-size: 4.8rem;
 }
 .page-body {
-  padding: 60px 0;
+  padding-top: 60px;
 }
 .page-body header p {
   margin: 36px auto 0;
@@ -173,15 +175,6 @@ button {
 }
 .page-body article .content-block {
   padding: 24px 48px;
-}
-.page-body article .content-block.span-full {
-  grid-column: span 12;
-}
-.page-body article .content-block.span-half {
-  grid-column: span 6;
-}
-.page-body article .content-block.span-thirds {
-  grid-column: span 4;
 }
 .page-body article .content-block header {
   margin-top: 96px;
@@ -197,7 +190,7 @@ button {
 }
 .page-body article .image-block {
   display: grid;
-  grid-column: span 6;
+  grid-column: auto-fill;
   grid-gap: 8px;
   grid-template-columns: repeat(6, 1fr);
 }
@@ -206,6 +199,21 @@ button {
 }
 .page-body article .image-block .span-half {
   grid-column: span 3;
+}
+.page-body article .content-block.span-full,
+.page-body article .image-block.span-full {
+  grid-column: span 12;
+}
+.page-body article .content-block.span-half,
+.page-body article .image-block.span-half {
+  grid-column: span 6;
+}
+.page-body article .content-block.span-thirds,
+.page-body article .image-block.span-thirds {
+  grid-column: span 4;
+}
+.page-body article:last-of-type {
+  margin-bottom: 0;
 }
 .page {
   position: absolute;
