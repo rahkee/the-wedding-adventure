@@ -74,7 +74,9 @@ a {
 }
 img {
   display: block;
-  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 button {
   background-color: transparent;
@@ -85,9 +87,9 @@ button {
 }
 .divider {
   display: flex;
-  margin: 60px auto;
-  max-width: 480px;
-  width: 60%;
+  margin: 50px auto;
+  max-width: 360px;
+  width: 100%;
 }
 .divider .fas {
   color: #b5b6b1;
@@ -112,10 +114,12 @@ button {
 }
 .icon-label .fa-exclamation-triangle {
   color: #a85213;
+  font-size: 2rem;
 }
 .icon-label .icon-text {
+  font-size: 1.2rem;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.2;
 }
 .icon-label .icon-text strong,
 .icon-label .icon-text em {
@@ -143,11 +147,11 @@ button {
   color: #a85213;
 }
 .page-header {
-  background-position: center center;
+  background-position: bottom center;
   background-size: cover;
   color: #eee;
   display: flex;
-  height: 64vw;
+  height: 40vw;
 }
 .page-header header {
   margin: auto;
@@ -190,7 +194,7 @@ button {
 }
 .page-body article .image-block {
   display: grid;
-  grid-column: auto-fill;
+  grid-auto-flow: dense;
   grid-gap: 8px;
   grid-template-columns: repeat(6, 1fr);
 }
@@ -211,6 +215,10 @@ button {
 .page-body article .content-block.span-thirds,
 .page-body article .image-block.span-thirds {
   grid-column: span 4;
+}
+.page-body article .content-block.span-two-thirds,
+.page-body article .image-block.span-two-thirds {
+  grid-column: span 8;
 }
 .page-body article:last-of-type {
   margin-bottom: 0;
