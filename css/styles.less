@@ -12,8 +12,8 @@
 @black: #2a2a2a;
 @white: #eee;
 @beige: #d5d6d0;
-@highlight: #a85213;
 @dark-beige: #b5b6b1;
+@highlight: #a85213;
 
 @seconds: .33s;
 
@@ -23,6 +23,8 @@
 
 .reading-font() {
     font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
 }
 
 .transition() {
@@ -37,24 +39,25 @@ html {
 body {
     background-color: @beige;
     color: @black;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     .reading-font;
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
+
+    + p {
+        margin-top: 0;
+    }
 }
 
 h1, h2, h3 {
     .heading-font;
+    text-align: center;
 }
 
 h1 {
-    font-size: 7.2rem;
-}
-
-h2, h3, h4, h6 {
-    text-align: center;
+    font-size: 6rem;
 }
 
 h2 {
@@ -65,32 +68,43 @@ h3 {
     font-size: 3.6rem;
 }
 
-h4, h5, p {
-    // font-size: 1.6rem;
-    line-height: 1.5;
+h4 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-align: center;
 }
 
-h4, p {
+h5 {
+    font-size: 1.8rem;
     font-weight: 300;
+    margin: 0 auto;
+    max-width: 360px;
+    text-align: center;
 }
 
 h6 {
-    font-size: 2.4rem;
+    font-size: 1.6rem;
     font-weight: 400;
+    margin: 24px auto 0;
+    max-width: 360px;
 }
 
 p {
-    margin-bottom: 20px;
-    margin-top: 0;
-    max-width: 480px;
-
-    &.small {
-        font-size: 1.4rem;
-    }
+    margin: 12px auto;
+    max-width: 360px;
 
     button {
         color: @highlight;
         font-weight: 400;
+    }
+}
+
+strong, em {
+    font-weight: 400;
+
+    &.text-highlight {
+        color: @highlight;
+        font-size: 2rem;
     }
 }
 
@@ -119,9 +133,13 @@ button {
     text-align: center;
 }
 
+.small {
+    font-size: 1.4rem;
+}
+
 .divider {
     display: flex;
-    margin: 50px auto;
+    margin: 48px auto;
     max-width: 360px;
     width: 100%;
 
@@ -139,7 +157,8 @@ button {
 .icon-label {
     align-items: center;
     display: flex;
-    padding: 12px 24px;
+    margin: 24px auto;
+    max-width: 360px;
 
     .fas, .far, .fab {
         font-size: 2.8rem;
@@ -153,14 +172,7 @@ button {
     }
 
     .icon-text {
-        font-size: 1.2rem;
-        font-weight: 300;
-        line-height: 1.2;
-
-        strong, em {
-            // font-size: 1.6rem;
-            font-weight: 400;
-        }
+        max-width: 66%;
     }
 }
 
@@ -168,7 +180,7 @@ button {
     background-color: rgba(0, 0, 0, .50);
     display: flex;
     flex-wrap: wrap;
-    // font-size: 1.6rem;
+    font-size: 1.6rem;
     justify-content: space-between;
     position: fixed;
     width: 100%;
@@ -200,7 +212,8 @@ button {
     background-size: cover;
     color: @white;
     display: flex;
-    height: 40vw;
+    display: none; // TODO
+    height: 100vh;
 
     header {
         margin: auto;
@@ -223,19 +236,26 @@ button {
     padding-top: 60px;
 
     header {
+        overflow: auto;
 
         p {
-            margin: 36px auto 0;
+            margin: 24px auto;
         }
     }
 
     article {
         display: grid;
+        grid-gap: .5vh;
+        grid-auto-flow: dense;
         grid-template-columns: repeat(12, 1fr);
-        margin: 24px auto;
+        margin-top: .5vh;
+
+        .content-block, .gallery-container {
+            grid-column: span 12;
+        }
 
         .content-block {
-            padding: 24px 36px;
+            padding: 36px;
 
             header {
                 margin-top: 96px;
@@ -245,52 +265,38 @@ button {
                 }
             }
 
-            h4 {
-                font-weight: 300;
-            }
-
             .divider {
-                margin: 24px auto;
+                margin: 32px auto;
             }
         }
+    }
+}
 
-        .image-block {
-            display: grid;
-            grid-auto-flow: dense;
-            grid-gap: 8px;
-            grid-template-columns: repeat(6, 1fr);
+.gallery-container {
+    display: grid;
+    grid-gap: .5vh;
+    grid-auto-flow: dense;
+    grid-auto-rows: 12vw;
+    grid-template-columns: repeat(auto-fill, minmax(24vw, 1fr));
 
-            .span-full {
-                grid-column: span 6;
-            }
+    img {
+        object-fit: cover;
+    }
 
-            .span-half {
-                grid-column: span 3;
-            }
-        }
+    .image-container {
 
-        .content-block, .image-block {
+        &:first-of-type, &:nth-child(4n) {
+            grid-column: span 2;
+            grid-row: span 2;
 
-            &.span-full {
-                grid-column: span 12;
-            }
-
-            &.span-half {
-                grid-column: span 6;
-            }
-
-            &.span-thirds {
+            @media screen and (max-width: 768px) {
                 grid-column: span 4;
             }
-            
-            &.span-two-thirds {
-                grid-column: span 8;
-            }
         }
+    }
 
-        &:last-of-type {
-            margin-bottom: 0;
-        }
+    @media screen and (max-width: 768px) {
+        grid-auto-rows: 18vw;
     }
 }
 
@@ -332,12 +338,20 @@ button {
         .page-header {
             background-image: url('/images/alexis-ray-engagement-32.jpg');
         }
+
+        .content-block, .gallery-container {
+            grid-column: span 4;
+        }
     }
     
     &.things-to-do {
     
         .page-header {
             background-image: url('/images/alexis-ray-engagement-37.jpg');
+        }
+
+        .content-block {
+            grid-column: span 6;
         }
     }
     
@@ -359,12 +373,6 @@ button {
     
         .page-header {
             background-image: url('/images/alexis-ray-engagement-32.jpg');
-        }
-
-        p {
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
         }
     }
     

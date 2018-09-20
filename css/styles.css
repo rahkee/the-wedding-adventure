@@ -12,8 +12,10 @@ html {
 body {
   background-color: #d5d6d0;
   color: #2a2a2a;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
 }
 h1,
 h2,
@@ -23,19 +25,22 @@ h5,
 h6 {
   margin: 0;
 }
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+  margin-top: 0;
+}
 h1,
 h2,
 h3 {
   font-family: 'Adlery Pro', serif;
+  text-align: center;
 }
 h1 {
-  font-size: 7.2rem;
-}
-h2,
-h3,
-h4,
-h6 {
-  text-align: center;
+  font-size: 6rem;
 }
 h2 {
   font-size: 4.8rem;
@@ -43,30 +48,40 @@ h2 {
 h3 {
   font-size: 3.6rem;
 }
-h4,
-h5,
-p {
-  line-height: 1.5;
-}
-h4,
-p {
-  font-weight: 300;
-}
-h6 {
+h4 {
   font-size: 2.4rem;
   font-weight: 400;
+  text-align: center;
+}
+h5 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin: 0 auto;
+  max-width: 360px;
+  text-align: center;
+}
+h6 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 24px auto 0;
+  max-width: 360px;
 }
 p {
-  margin-bottom: 20px;
-  margin-top: 0;
-  max-width: 480px;
-}
-p.small {
-  font-size: 1.4rem;
+  margin: 12px auto;
+  max-width: 360px;
 }
 p button {
   color: #a85213;
   font-weight: 400;
+}
+strong,
+em {
+  font-weight: 400;
+}
+strong.text-highlight,
+em.text-highlight {
+  color: #a85213;
+  font-size: 2rem;
 }
 a {
   color: #a85213;
@@ -89,9 +104,12 @@ button {
 .text-center {
   text-align: center;
 }
+.small {
+  font-size: 1.4rem;
+}
 .divider {
   display: flex;
-  margin: 50px auto;
+  margin: 48px auto;
   max-width: 360px;
   width: 100%;
 }
@@ -106,7 +124,8 @@ button {
 .icon-label {
   align-items: center;
   display: flex;
-  padding: 12px 24px;
+  margin: 24px auto;
+  max-width: 360px;
 }
 .icon-label .fas,
 .icon-label .far,
@@ -120,18 +139,13 @@ button {
   color: #a85213;
 }
 .icon-label .icon-text {
-  font-size: 1.2rem;
-  font-weight: 300;
-  line-height: 1.2;
-}
-.icon-label .icon-text strong,
-.icon-label .icon-text em {
-  font-weight: 400;
+  max-width: 66%;
 }
 .main-nav {
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-wrap: wrap;
+  font-size: 1.6rem;
   justify-content: space-between;
   position: fixed;
   width: 100%;
@@ -153,7 +167,8 @@ button {
   background-size: cover;
   color: #eee;
   display: flex;
-  height: 40vw;
+  display: none;
+  height: 100vh;
 }
 .page-header header {
   margin: auto;
@@ -171,16 +186,25 @@ button {
 .page-body {
   padding-top: 60px;
 }
+.page-body header {
+  overflow: auto;
+}
 .page-body header p {
-  margin: 36px auto 0;
+  margin: 24px auto;
 }
 .page-body article {
   display: grid;
+  grid-gap: .5vh;
+  grid-auto-flow: dense;
   grid-template-columns: repeat(12, 1fr);
-  margin: 24px auto;
+  margin-top: .5vh;
+}
+.page-body article .content-block,
+.page-body article .gallery-container {
+  grid-column: span 12;
 }
 .page-body article .content-block {
-  padding: 24px 36px;
+  padding: 36px;
 }
 .page-body article .content-block header {
   margin-top: 96px;
@@ -188,42 +212,34 @@ button {
 .page-body article .content-block header:first-of-type {
   margin-top: 0;
 }
-.page-body article .content-block h4 {
-  font-weight: 300;
-}
 .page-body article .content-block .divider {
-  margin: 24px auto;
+  margin: 32px auto;
 }
-.page-body article .image-block {
+.gallery-container {
   display: grid;
+  grid-gap: .5vh;
   grid-auto-flow: dense;
-  grid-gap: 8px;
-  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 12vw;
+  grid-template-columns: repeat(auto-fill, minmax(24vw, 1fr));
 }
-.page-body article .image-block .span-full {
-  grid-column: span 6;
+.gallery-container img {
+  object-fit: cover;
 }
-.page-body article .image-block .span-half {
-  grid-column: span 3;
+.gallery-container .image-container:first-of-type,
+.gallery-container .image-container:nth-child(4n) {
+  grid-column: span 2;
+  grid-row: span 2;
 }
-.page-body article .content-block.span-full,
-.page-body article .image-block.span-full {
-  grid-column: span 12;
+@media screen and (max-width: 768px) {
+  .gallery-container .image-container:first-of-type,
+  .gallery-container .image-container:nth-child(4n) {
+    grid-column: span 4;
+  }
 }
-.page-body article .content-block.span-half,
-.page-body article .image-block.span-half {
-  grid-column: span 6;
-}
-.page-body article .content-block.span-thirds,
-.page-body article .image-block.span-thirds {
-  grid-column: span 4;
-}
-.page-body article .content-block.span-two-thirds,
-.page-body article .image-block.span-two-thirds {
-  grid-column: span 8;
-}
-.page-body article:last-of-type {
-  margin-bottom: 0;
+@media screen and (max-width: 768px) {
+  .gallery-container {
+    grid-auto-rows: 18vw;
+  }
 }
 .page {
   position: absolute;
@@ -252,8 +268,15 @@ button {
 .page.getting-there .page-header {
   background-image: url('/images/alexis-ray-engagement-32.jpg');
 }
+.page.getting-there .content-block,
+.page.getting-there .gallery-container {
+  grid-column: span 4;
+}
 .page.things-to-do .page-header {
   background-image: url('/images/alexis-ray-engagement-37.jpg');
+}
+.page.things-to-do .content-block {
+  grid-column: span 6;
 }
 .page.book-your-adventure .page-header {
   background-image: url('/images/alexis-ray-engagement-29.jpg');
@@ -263,11 +286,6 @@ button {
 }
 .page.gallery .page-header {
   background-image: url('/images/alexis-ray-engagement-32.jpg');
-}
-.page.gallery p {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
 }
 .page.contact-us .page-header {
   background-image: url('/images/alexis-ray-engagement-102.jpg');
