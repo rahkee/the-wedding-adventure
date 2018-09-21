@@ -17,16 +17,37 @@
 </head>
 
 <body>
-    <nav class="main-nav">
+    <nav class="top-nav">
         <button class="btn-home" data-attribute-name="home">Home</button>
-        <button data-attribute-name="accommodations">Accommodations</button>
-        <button data-attribute-name="getting-there">Getting There</button>
-        <button data-attribute-name="things-to-do">Things to Do</button>
+        <button class="btn-book-your-adventure" data-attribute-name="book-your-adventure">Book your Adventure
+            Now</button>
+        <div>
+            <!-- Spacer -->
+        </div>
+    </nav>
 
-        <button data-attribute-name="wedding-schedule">Schedule</button>
-        <button data-attribute-name="gallery">Gallery</button>
-        <button data-attribute-name="contact-us">Contact Us</button>
-        <button data-attribute-name="faqs">FAQs</button>
+    <nav class="main-nav">
+        <div class="menu-group">
+            <button data-attribute-name="accommodations">Accommodations</button>
+            <button data-attribute-name="getting-there">Getting There</button>
+            <button data-attribute-name="things-to-do">Things to Do</button>
+
+            <div class="divider">
+                <hr><i class="fas fa-tree"></i>
+                <hr>
+            </div>
+
+            <button data-attribute-name="wedding-schedule">Schedule</button>
+            <button data-attribute-name="gallery">Gallery</button>
+
+            <div class="divider">
+                <hr><i class="fas fa-tree"></i>
+                <hr>
+            </div>
+
+            <button data-attribute-name="contact-us">Contact Us</button>
+            <button data-attribute-name="faqs">FAQs</button>
+        </div>
     </nav>
 
     <main class="page home" data-attribute-page="home">
@@ -36,8 +57,7 @@
                     <h1>The Great Outdoor</h1>
                     <h4>Alexis and Ray's Wedding</h4>
 
-                    <button class="btn-book-your-adventure" data-attribute-name="book-your-adventure">Book your<br />Adventure
-                        Now</button>
+
                 </div>
             </header>
         </div>
