@@ -16,7 +16,7 @@ document.onreadystatechange = () => {
     }
 };
 
-function showPage (e) {
+function showPage(e) {
 
     const elementClass = '.' + e.target.dataset.attributeName;
     const visibleMainElement = document.querySelector(elementClass);
@@ -25,11 +25,12 @@ function showPage (e) {
     mainElements.forEach(mainElement => {
 
         if (mainElement.classList.contains('show')) {
-            mainElement.classList.remove('show');
 
-            setTimeout(() => {
+            mainElement.addEventListener('transitionend', () => {
                 mainElement.classList.add('delete');
-            }, 400);
+            })
+
+            mainElement.classList.remove('show');
             // TODO: Convert milliseconds to stylesheet var
         }
     })

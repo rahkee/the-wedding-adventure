@@ -11,11 +11,19 @@ html {
 }
 body {
   background-color: #d5d6d0;
+  background-image: url('/images/bg-b.jpg');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
   color: #2a2a2a;
   font-size: 1.6rem;
+  overflow-y: scroll;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
   line-height: 1.4;
+}
+.the-containment-chamber {
+  position: relative;
 }
 h1,
 h2,
@@ -268,12 +276,8 @@ button {
   }
 }
 .page {
-  background-image: url('/images/bg-b.jpg');
-  background-position: center bottom;
-  background-repeat: no-repeat;
   opacity: 0;
   min-height: 100vh;
-  position: absolute;
   transition-duration: 0.33s;
   transition-timing-function: ease-in-out;
   transition-property: opacity;
