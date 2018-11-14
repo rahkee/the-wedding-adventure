@@ -25,7 +25,6 @@
 .reading-font() {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
-    line-height: 1.4;
 }
 
 .transition() {
@@ -45,6 +44,7 @@ body {
     background-size: contain;
     color: @black;
     font-size: 1.6rem;
+    line-height: 1.6;
     overflow-y: scroll;
     .reading-font;
 }
@@ -84,7 +84,7 @@ h5 {
     font-size: 1.8rem;
     font-weight: 300;
     margin: 0 auto;
-    max-width: 420px;
+    max-width: 480px;
     text-align: center;
 }
 
@@ -92,12 +92,12 @@ h6 {
     font-size: 1.6rem;
     font-weight: 400;
     margin: 24px auto 0;
-    max-width: 420px;
+    max-width: 480px;
 }
 
 p {
     margin: 12px auto;
-    max-width: 420px;
+    max-width: 480px;
 
     button {
         color: @highlight;
@@ -118,6 +118,11 @@ a {
     color: @highlight;
     font-weight: 400;
     text-decoration: none;
+
+    &[disabled] {
+        opacity: .24;
+        pointer-events: none;
+    }
 }
 
 img {
@@ -137,6 +142,53 @@ button {
     transition-property: color;
 }
 
+fieldset {
+    border: none;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 12px 0;
+    max-width: 768px;
+
+    h5, p {
+        margin-bottom: 6px;
+        max-width: unset;
+        text-align: unset;
+    }
+
+    p {
+        font-size: 1.4rem;
+        line-height: 1.4;
+    }
+
+    .choice-block {
+        float: left;
+        padding: 12px 24px;
+        width: ~"calc(12% - 48px)";
+
+        &:nth-of-type(3) {
+            width: ~"calc(76% - 48px)";
+        }
+    }
+
+    input[type="email"],
+    input[type="submit"],
+    input[type="text"],
+    select,
+    textarea {
+        border: none;
+        border-radius: 4px;
+        line-height: 1.5;
+        margin: 6px 0;
+        padding: 12px 24px;
+        width: ~"calc(100% - 48px)";
+    }
+
+    input[type="submit"],
+    select {
+        width: unset;
+    }
+}
+
 .text-center {
     text-align: center;
 }
@@ -148,8 +200,8 @@ button {
 
 .divider {
     display: flex;
-    margin: 48px auto;
-    max-width: 420px;
+    margin: 36px auto;
+    max-width: 480px;
     width: 100%;
 
     .fas {
@@ -168,7 +220,7 @@ button {
     align-items: center;
     display: flex;
     margin: 24px auto;
-    max-width: 420px;
+    max-width: 480px;
 
     .fas, .far, .fab {
         font-size: 2.8rem;
@@ -187,14 +239,11 @@ button {
 }
 
 .top-nav {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    z-index: 2;
-    width: 100%;
 
-    button {
-        padding: 12px 24px;
+    a {
+        display: block;
+        padding: 8px;
+        text-align: center;
 
         &:hover {
             color: @highlight;
@@ -211,20 +260,13 @@ button {
 }
 
 .main-nav {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    height: 100vh;
-    padding: 0;
-    position: absolute;
-    width: 33vw;
-    z-index: 1;
 
-    button {
+    a {
         color: @shadow;
+        display: block;
         font-size: 1.8rem;
         padding: 8px;
-        width: 100%;
+        text-align: center;
 
         &:hover {
             color: @white;
@@ -239,8 +281,7 @@ button {
 
 .page-header {
     color: @white;
-    display: flex;
-    height: 100vh;
+    
     overflow: hidden;
 
     header {
@@ -249,11 +290,8 @@ button {
         background-size: cover;
         background-repeat: no-repeat;
         display: flex;
-        height: 66vh;
+        height: 60vh;
         justify-content: center;
-        margin: auto 0 auto auto;
-        text-align: center;
-        width: 66vw;
 
         h3 {
             font-weight: 300;

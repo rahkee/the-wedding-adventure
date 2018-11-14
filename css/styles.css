@@ -17,10 +17,10 @@ body {
   background-size: contain;
   color: #2a2a2a;
   font-size: 1.6rem;
+  line-height: 1.6;
   overflow-y: scroll;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
-  line-height: 1.4;
 }
 h1,
 h2,
@@ -62,18 +62,18 @@ h5 {
   font-size: 1.8rem;
   font-weight: 300;
   margin: 0 auto;
-  max-width: 420px;
+  max-width: 480px;
   text-align: center;
 }
 h6 {
   font-size: 1.6rem;
   font-weight: 400;
   margin: 24px auto 0;
-  max-width: 420px;
+  max-width: 480px;
 }
 p {
   margin: 12px auto;
-  max-width: 420px;
+  max-width: 480px;
 }
 p button {
   color: #a85213;
@@ -93,6 +93,10 @@ a {
   font-weight: 400;
   text-decoration: none;
 }
+a[disabled] {
+  opacity: .24;
+  pointer-events: none;
+}
 img {
   display: block;
   height: 100%;
@@ -109,6 +113,47 @@ button {
   transition-timing-function: ease-in-out;
   transition-property: color;
 }
+fieldset {
+  border: none;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 12px 0;
+  max-width: 768px;
+}
+fieldset h5,
+fieldset p {
+  margin-bottom: 6px;
+  max-width: unset;
+  text-align: unset;
+}
+fieldset p {
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+fieldset .choice-block {
+  float: left;
+  padding: 12px 24px;
+  width: calc(12% - 48px);
+}
+fieldset .choice-block:nth-of-type(3) {
+  width: calc(76% - 48px);
+}
+fieldset input[type="email"],
+fieldset input[type="submit"],
+fieldset input[type="text"],
+fieldset select,
+fieldset textarea {
+  border: none;
+  border-radius: 4px;
+  line-height: 1.5;
+  margin: 6px 0;
+  padding: 12px 24px;
+  width: calc(100% - 48px);
+}
+fieldset input[type="submit"],
+fieldset select {
+  width: unset;
+}
 .text-center {
   text-align: center;
 }
@@ -118,8 +163,8 @@ button {
 }
 .divider {
   display: flex;
-  margin: 48px auto;
-  max-width: 420px;
+  margin: 36px auto;
+  max-width: 480px;
   width: 100%;
 }
 .divider .fas {
@@ -135,7 +180,7 @@ button {
   align-items: center;
   display: flex;
   margin: 24px auto;
-  max-width: 420px;
+  max-width: 480px;
 }
 .icon-label .fas,
 .icon-label .far,
@@ -151,36 +196,22 @@ button {
 .icon-label .icon-text {
   max-width: 66%;
 }
-.top-nav {
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  z-index: 2;
-  width: 100%;
+.top-nav a {
+  display: block;
+  padding: 8px;
+  text-align: center;
 }
-.top-nav button {
-  padding: 12px 24px;
-}
-.top-nav button:hover {
+.top-nav a:hover {
   color: #a85213;
 }
-.main-nav {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  height: 100vh;
-  padding: 0;
-  position: absolute;
-  width: 33vw;
-  z-index: 1;
-}
-.main-nav button {
+.main-nav a {
   color: #4d4833;
+  display: block;
   font-size: 1.8rem;
   padding: 8px;
-  width: 100%;
+  text-align: center;
 }
-.main-nav button:hover {
+.main-nav a:hover {
   color: #eee;
 }
 .main-nav .divider {
@@ -189,8 +220,6 @@ button {
 }
 .page-header {
   color: #eee;
-  display: flex;
-  height: 100vh;
   overflow: hidden;
 }
 .page-header header {
@@ -199,11 +228,8 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  height: 66vh;
+  height: 60vh;
   justify-content: center;
-  margin: auto 0 auto auto;
-  text-align: center;
-  width: 66vw;
 }
 .page-header header h3 {
   font-weight: 300;
