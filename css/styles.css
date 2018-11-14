@@ -116,9 +116,11 @@ button {
 fieldset {
   border: none;
   margin: 0 auto;
-  overflow: auto;
   padding: 6px 0;
-  max-width: 768px;
+  max-width: 480px;
+}
+fieldset.center-content {
+  text-align: center;
 }
 fieldset h5,
 fieldset p {
@@ -126,17 +128,34 @@ fieldset p {
   max-width: unset;
   text-align: unset;
 }
+fieldset h5 {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  font-weight: 400;
+}
 fieldset p {
   font-size: 1.4rem;
   line-height: 1.4;
 }
-fieldset .choice-block {
-  float: left;
-  padding: 12px 24px;
-  width: calc(12% - 48px);
+fieldset .required {
+  color: #900;
+  font-size: 2rem;
+  margin-left: 4px;
 }
-fieldset .choice-block:nth-of-type(3) {
-  width: calc(76% - 48px);
+fieldset .choice-block {
+  overflow: auto;
+  padding: 6px 12px;
+}
+fieldset .choice-block input,
+fieldset .choice-block label {
+  float: left;
+}
+fieldset .choice-block input {
+  margin: 6px;
+}
+fieldset .choice-block label {
+  margin-top: 1px;
+  width: calc(100% - 48px);
 }
 fieldset input[type="email"],
 fieldset input[type="submit"],
@@ -153,6 +172,10 @@ fieldset textarea {
 fieldset input[type="submit"],
 fieldset select {
   width: unset;
+}
+fieldset input[type="submit"] {
+  background-color: #b5b6b1;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.24);
 }
 .text-center {
   text-align: center;
@@ -340,4 +363,19 @@ fieldset select {
 }
 .page.faqs .page-header header {
   background-image: url('/images/alexis-ray-engagement-66.jpg');
+}
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: 0.33s;
+  transition-timing-function: ease-in-out;
+  transition-property: opacity, transform;
+}
+.reveal.hide {
+  opacity: 0;
+  height: 0;
+  margin: 0 !important;
+  overflow: hidden;
+  padding: 0;
+  transform: translateY(-48px);
 }

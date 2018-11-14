@@ -9,12 +9,13 @@
 }
 
 /* Colors */
-@black: #2a2a2a;
-@white: #eee;
 @beige: #d5d6d0;
+@black: #2a2a2a;
 @dark-beige: #b5b6b1;
-@shadow: #4d4833;
 @highlight: #a85213;
+@red: #900;
+@white: #eee;
+@shadow: #4d4833;
 
 @seconds: .33s;
 
@@ -145,9 +146,12 @@ button {
 fieldset {
     border: none;
     margin: 0 auto;
-    overflow: auto;
     padding: 6px 0;
-    max-width: 768px;
+    max-width: 480px;
+
+    &.center-content {
+        text-align: center;
+    }
 
     h5, p {
         margin-bottom: 6px;
@@ -155,18 +159,38 @@ fieldset {
         text-align: unset;
     }
 
+    h5 {
+        font-size: 1.8rem;
+        line-height: 1.8;
+        font-weight: 400;
+    }
+
     p {
         font-size: 1.4rem;
         line-height: 1.4;
     }
 
-    .choice-block {
-        float: left;
-        padding: 12px 24px;
-        width: ~"calc(12% - 48px)";
+    .required {
+        color: @red;
+        font-size: 2rem;
+        margin-left: 4px;
+    }
 
-        &:nth-of-type(3) {
-            width: ~"calc(76% - 48px)";
+    .choice-block {
+        overflow: auto;
+        padding: 6px 12px;
+
+        input, label {
+            float: left;
+        }
+
+        input {
+            margin: 6px;
+        }
+
+        label {
+            margin-top: 1px;
+            width: ~"calc(100% - 48px)";
         }
     }
 
@@ -186,6 +210,11 @@ fieldset {
     input[type="submit"],
     select {
         width: unset;
+    }
+
+    input[type="submit"] {
+        background-color: @dark-beige;
+        box-shadow: 0px 2px 0px rgba(0, 0, 0, .24);
     }
 }
 
@@ -456,5 +485,21 @@ fieldset {
         .page-header header {
             background-image: url('/images/alexis-ray-engagement-66.jpg');
         }
+    }
+}
+
+.reveal {
+    opacity: 1;
+    transform: translateY(0);
+    .transition;
+    transition-property: opacity, transform;
+
+    &.hide {
+        opacity: 0;
+        height: 0;
+        margin: 0 !important;
+        overflow: hidden;
+        padding: 0;
+        transform: translateY(-48px);
     }
 }
