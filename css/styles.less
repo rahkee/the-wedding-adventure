@@ -403,6 +403,65 @@ fieldset {
     }
 }
 
+@color-palette-a: red;
+@color-palette-b: blue;
+@color-palette-c: green;
+@color-palette-d: yellow;
+
+@color-palette-primary: @color-palette-a;
+@color-palette-secondary: @color-palette-b;
+@color-palette-tertiary: @color-palette-c;
+@color-palette-quaternary: @color-palette-d;
+
+.color-palette-section {
+    display: flex;
+    margin: 24px auto;
+    max-width: 480px;
+
+    .color-palette-container {
+        text-align: center;
+        width: 100%;
+    }
+
+    .color-palette-shade {
+        background-color: transparent;
+        border-radius: 50%;
+        height: 84px;
+        margin: auto;
+        width: 84px;
+
+        &.primary {
+            background-color: @color-palette-primary;
+        }
+
+        &.secondary {
+            background-color: @color-palette-secondary;
+        }
+
+        &.tertiary {
+            background-color: @color-palette-tertiary;
+        }
+
+        &.quaternary {
+            background-color: @color-palette-quaternary;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        display: block;
+
+        .color-palette-shade {
+            border-radius: 4px;
+            width: 100%;
+        }
+    }
+
+    p {
+        font-size: 1.4rem;
+        margin: 6px;
+    }
+}
+
 .page {
 
     &.show {
