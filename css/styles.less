@@ -45,7 +45,7 @@ body {
     background-size: contain;
     color: @black;
     font-size: 1.6rem;
-    line-height: 1.6;
+    line-height: 1.5;
     overflow-y: scroll;
     .reading-font;
 }
@@ -233,6 +233,14 @@ fieldset {
     max-width: 480px;
     width: 100%;
 
+    &.thin {
+        margin: 12px auto;
+
+        .fas {
+            display: none;
+        }
+    }
+
     .fas {
         color: @dark-beige;
         margin: 0 12px;
@@ -368,8 +376,12 @@ fieldset {
                 }
             }
 
-            .divider {
-                margin: 32px auto;
+            &.timeline {
+
+                p {
+                    font-size: 1.4rem;
+                    line-height: 1.4;
+                }
             }
         }
     }
@@ -379,7 +391,7 @@ fieldset {
     display: grid;
     grid-gap: .5vh;
     grid-auto-flow: dense;
-    grid-auto-rows: 12vw;
+    grid-auto-rows: 18vw;
     grid-template-columns: repeat(auto-fill, minmax(24vw, 1fr));
 
     img {
@@ -395,6 +407,22 @@ fieldset {
             @media screen and (max-width: 768px) {
                 grid-column: span 4;
             }
+        }
+
+        &.tall-2 {
+            grid-row: span 2;
+        }
+
+        &.tall-3 {
+            grid-row: span 3;
+        }
+
+        &.tall-4 {
+            grid-row: span 4;
+        }
+
+        &.tall-6 {
+            grid-row: span 6;
         }
     }
 
