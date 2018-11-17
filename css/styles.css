@@ -434,7 +434,7 @@ fieldset input[type="submit"] {
 .reveal.hide {
   opacity: 0;
   height: 0;
-  margin: 0 !important;
+  margin: 0 auto !important;
   overflow: hidden;
   padding: 0;
   transform: translateY(-48px);

@@ -2,27 +2,57 @@ document.onreadystatechange = () => {
 
     if (document.readyState === 'complete') {
 
+        // If the user wants to decline
         const radioElementNo = document.querySelector('#wedding-attendance-no');
-        const radioElementYes = document.querySelector('#wedding-attendance-yes');
+        const formDecline = document.querySelector('.form-decline');
+        const formDeclineElements = formDecline.querySelectorAll('.reveal');
 
         radioElementNo.addEventListener('click', () => {
 
-            // Get first divider
-            radioElementNo.parentElement.parentElement.nextElementSibling.classList.remove('hide');
+            // Hide the RSVP fields
+            formAcceptElements.forEach((e) => {
+                
+                setTimeout(() => {
+                    e.classList.add('hide');
+                }, 250);
 
-            // Get name form
-            radioElementNo.parentElement.parentElement.nextElementSibling.nextElementSibling.classList.remove('hide');
+            });
 
-            // Get submit button
-            radioElementNo.parentElement.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.classList.remove('hide');
-        })
+            // Show the decline fields
+            formDeclineElements.forEach((e) => {
 
-        // const revealElements = Array.from(document.querySelectorAll('.divider'));
+                setTimeout(() => {
+                    e.classList.remove('hide');
+                }, 500);
 
-        // revealElements.forEach(e => {
-        //     e.addEventListener('transitionend', (e) => {
-        //         // console.log(e + '\'s animation is over!');
-        //     })
-        // });
+            });
+        });
+
+
+        // If the user wants to RSVP
+        const radioElementYes = document.querySelector('#wedding-attendance-yes');
+        const formAccept = document.querySelector('.form-rsvp');        
+        const formAcceptElements = formAccept.querySelectorAll('.reveal');
+
+        radioElementYes.addEventListener('click', () => {
+
+            // Hide the decline fields
+            formDeclineElements.forEach((e) => {
+
+                setTimeout(() => {
+                    e.classList.add('hide');
+                }, 500);
+
+            });
+
+            // Show the RSVP fields
+            formAcceptElements.forEach((e) => {
+                
+                setTimeout(() => {
+                    e.classList.remove('hide');
+                }, 250);
+
+            });
+        });
     }
 };
