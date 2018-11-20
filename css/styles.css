@@ -46,6 +46,7 @@ h3 {
 }
 h1 {
   font-size: 6rem;
+  max-width: 84%;
 }
 h2 {
   font-size: 4.8rem;
@@ -269,13 +270,11 @@ fieldset input[type="submit"] {
   margin-top: 48px;
   font-size: 4.8rem;
 }
-.page-body {
-  padding-top: 60px;
-}
-.page-body header {
+.page-body > header {
   overflow: auto;
+  padding: 48px 24px 0;
 }
-.page-body header p {
+.page-body > header p {
   margin: 24px auto;
 }
 .page-body article {
@@ -284,6 +283,11 @@ fieldset input[type="submit"] {
   grid-auto-flow: dense;
   grid-template-columns: repeat(12, 1fr);
   margin-top: .5vh;
+}
+@media screen and (max-width: 768px) {
+  .page-body article {
+    display: block;
+  }
 }
 .page-body article .content-block,
 .page-body article .gallery-container {
@@ -351,10 +355,11 @@ fieldset input[type="submit"] {
 }
 .color-palette-section .color-palette-shade {
   background-color: transparent;
+  border: 3px white solid;
   border-radius: 50%;
-  height: 84px;
+  height: 72px;
   margin: auto;
-  width: 84px;
+  width: 72px;
 }
 .color-palette-section .color-palette-shade.primary {
   background-color: #ffe7e3;
@@ -363,13 +368,10 @@ fieldset input[type="submit"] {
   background-color: #c59595;
 }
 .color-palette-section .color-palette-shade.tertiary {
-  background-color: #a49288;
-}
-.color-palette-section .color-palette-shade.quaternary {
   background-color: #6d693c;
 }
-.color-palette-section .color-palette-shade.quinary {
-  background-color: #5b3601;
+.color-palette-section .color-palette-shade.quaternary {
+  background-color: #7d5c46;
 }
 @media screen and (max-width: 768px) {
   .color-palette-section {

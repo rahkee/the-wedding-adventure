@@ -65,6 +65,7 @@ h1, h2, h3 {
 
 h1 {
     font-size: 6rem;
+    max-width: 84%;
 }
 
 h2 {
@@ -344,10 +345,10 @@ fieldset {
 }
 
 .page-body {
-    padding-top: 60px;
 
-    header {
+    > header {
         overflow: auto;
+        padding: 48px 24px 0;
 
         p {
             margin: 24px auto;
@@ -360,6 +361,10 @@ fieldset {
         grid-auto-flow: dense;
         grid-template-columns: repeat(12, 1fr);
         margin-top: .5vh;
+
+        @media screen and (max-width: 768px) {
+            display: block;
+        }
 
         .content-block, .gallery-container {
             grid-column: span 12;
@@ -433,15 +438,13 @@ fieldset {
 
 @color-palette-a: #ffe7e3;
 @color-palette-b: #c59595;
-@color-palette-c: #a49288;
-@color-palette-d: #6d693c;
-@color-palette-e: #5b3601;
+@color-palette-c: #6d693c;
+@color-palette-d: #7d5c46;
 
 @color-palette-primary: @color-palette-a;
 @color-palette-secondary: @color-palette-b;
 @color-palette-tertiary: @color-palette-c;
 @color-palette-quaternary: @color-palette-d;
-@color-palette-quinary: @color-palette-e;
 
 .color-palette-section {
     display: flex;
@@ -455,10 +458,11 @@ fieldset {
 
     .color-palette-shade {
         background-color: transparent;
+        border: 3px white solid;
         border-radius: 50%;
-        height: 84px;
+        height: 72px;
         margin: auto;
-        width: 84px;
+        width: 72px;
 
         &.primary {
             background-color: @color-palette-primary;
@@ -474,10 +478,6 @@ fieldset {
 
         &.quaternary {
             background-color: @color-palette-quaternary;
-        }
-
-        &.quinary {
-            background-color: @color-palette-quinary;
         }
     }
 
