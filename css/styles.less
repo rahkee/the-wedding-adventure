@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Adlery Pro';
-    src: url('/fonts/adlery-pro.swash.eot'); /* IE9 Compat Modes */
-    src: url('/fonts/adlery-pro.swash.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('/fonts/adlery-pro.swash.woff2') format('woff2'), /* Super Modern Browsers */
-    url('/fonts/AdleryPro-Swash.woff') format('woff'), /* Pretty Modern Browsers */
-    url('/fonts/AdleryPro-Swash.ttf')  format('truetype'), /* Safari, Android, iOS */
-    url('/fonts/AdleryPro-Swash.svg#svgFontName') format('svg'); /* Legacy iOS */
+    src: url('../fonts/adlery-pro.swash.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/adlery-pro.swash.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/adlery-pro.swash.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/AdleryPro-Swash.woff') format('woff'), /* Pretty Modern Browsers */
+    url('../fonts/AdleryPro-Swash.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/AdleryPro-Swash.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 /* Colors */
@@ -39,7 +39,7 @@ html {
 
 body {
     background-color: @beige;
-    background-image: url('/images/bg-b.jpg');
+    background-image: url('../images/bg-b.jpg');
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: contain;
@@ -431,15 +431,17 @@ fieldset {
     }
 }
 
-@color-palette-a: red;
-@color-palette-b: blue;
-@color-palette-c: green;
-@color-palette-d: yellow;
+@color-palette-a: #ffe7e3;
+@color-palette-b: #c59595;
+@color-palette-c: #a49288;
+@color-palette-d: #6d693c;
+@color-palette-e: #5b3601;
 
 @color-palette-primary: @color-palette-a;
 @color-palette-secondary: @color-palette-b;
 @color-palette-tertiary: @color-palette-c;
 @color-palette-quaternary: @color-palette-d;
+@color-palette-quinary: @color-palette-e;
 
 .color-palette-section {
     display: flex;
@@ -472,6 +474,10 @@ fieldset {
 
         &.quaternary {
             background-color: @color-palette-quaternary;
+        }
+
+        &.quinary {
+            background-color: @color-palette-quinary;
         }
     }
 
@@ -506,21 +512,21 @@ fieldset {
     &.home {
 
         .page-header header {
-            background-image: url('/images/alexis-ray-engagement-29.jpg');
+            background-image: url('../images/alexis-ray-engagement-29.jpg');
         }
     }
     
     &.accommodations {
     
         .page-header header {
-            background-image: url('/images/alexis-ray-engagement-24.jpg');
+            background-image: url('../images/alexis-ray-engagement-24.jpg');
         }
     }
     
     &.getting-there {
     
         .page-header header {
-            background-image: url('/images/alexis-ray-engagement-32.jpg');
+            background-image: url('../images/alexis-ray-engagement-32.jpg');
         }
 
         .content-block, .gallery-container {
@@ -531,7 +537,7 @@ fieldset {
     &.things-to-do {
     
         .page-header header {
-            background-image: url('/images/alexis-ray-engagement-37.jpg');
+            background-image: url('../images/alexis-ray-engagement-37.jpg');
         }
 
         .content-block {
@@ -542,35 +548,35 @@ fieldset {
     &.book-your-adventure {
     
         .page-header header {
-            background-image: url('/images/alexis-ray-engagement-29.jpg');
+            background-image: url('../images/alexis-ray-engagement-29.jpg');
         }
     }
     
     &.wedding-schedule {
     
         .page-header header {
-            background-image: url('/images/alexis-ray-engagement-49.jpg');
+            background-image: url('../images/alexis-ray-engagement-49.jpg');
         }
     }
     
     &.gallery {
     
         .page-header header {
-            background-image: url('/images/alexis-ray-engagement-32.jpg');
+            background-image: url('../images/alexis-ray-engagement-32.jpg');
         }
     }
     
     &.contact-us {
     
         .page-header header {
-            background-image: url('/images/alexis-ray-engagement-102.jpg');
+            background-image: url('../images/alexis-ray-engagement-102.jpg');
         }
     }
     
     &.faqs {
     
         .page-header header {
-            background-image: url('/images/alexis-ray-engagement-66.jpg');
+            background-image: url('../images/alexis-ray-engagement-66.jpg');
         }
     }
 }
