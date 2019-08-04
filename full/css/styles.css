@@ -1,0 +1,446 @@
+@font-face {
+  font-family: 'Adlery Pro';
+  src: url('../fonts/adlery-pro.swash.eot');
+  /* IE9 Compat Modes */
+  src: url('../fonts/adlery-pro.swash.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/adlery-pro.swash.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/AdleryPro-Swash.woff') format('woff'), /* Pretty Modern Browsers */ url('../fonts/AdleryPro-Swash.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/AdleryPro-Swash.svg#svgFontName') format('svg');
+  /* Legacy iOS */
+}
+/* Colors */
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #d5d6d0;
+  background-image: url('../images/bg-b.jpg');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #2a2a2a;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  overflow-y: scroll;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+  margin-top: 0;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Adlery Pro', serif;
+  text-align: center;
+}
+h1 {
+  font-size: 6rem;
+  max-width: 84%;
+}
+h2 {
+  font-size: 4.8rem;
+}
+h3 {
+  font-size: 3.6rem;
+}
+h4 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-align: center;
+}
+h5 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin: 0 auto;
+  max-width: 480px;
+  text-align: center;
+}
+h6 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 24px auto 0;
+  max-width: 480px;
+}
+p {
+  margin: 12px auto;
+  max-width: 480px;
+}
+p button {
+  color: #a85213;
+  font-weight: 400;
+}
+strong,
+em {
+  font-weight: 400;
+}
+strong.text-highlight,
+em.text-highlight {
+  color: #a85213;
+  font-size: 2rem;
+}
+a {
+  color: #a85213;
+  font-weight: 400;
+  text-decoration: none;
+}
+a[disabled] {
+  opacity: .24;
+  pointer-events: none;
+}
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-weight: 300;
+  padding: 0;
+  transition-duration: 0.33s;
+  transition-timing-function: ease-in-out;
+  transition-property: color;
+}
+fieldset {
+  border: none;
+  margin: 0 auto;
+  padding: 6px 0;
+  max-width: 480px;
+}
+fieldset.center-content {
+  text-align: center;
+}
+fieldset h5,
+fieldset p {
+  margin-bottom: 6px;
+  max-width: unset;
+  text-align: unset;
+}
+fieldset h5 {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  font-weight: 400;
+}
+fieldset p {
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+fieldset .required {
+  color: #900;
+  font-size: 2rem;
+  margin-left: 4px;
+}
+fieldset .choice-block {
+  overflow: auto;
+  padding: 6px 12px;
+}
+fieldset .choice-block input,
+fieldset .choice-block label {
+  float: left;
+}
+fieldset .choice-block input {
+  margin: 6px;
+}
+fieldset .choice-block label {
+  margin-top: 1px;
+  width: calc(100% - 48px);
+}
+fieldset input[type="email"],
+fieldset input[type="submit"],
+fieldset input[type="text"],
+fieldset select,
+fieldset textarea {
+  border: none;
+  border-radius: 4px;
+  line-height: 1.5;
+  margin: 6px auto;
+  padding: 12px 24px;
+  width: calc(100% - 48px);
+}
+fieldset input[type="submit"],
+fieldset select {
+  width: unset;
+}
+fieldset input[type="submit"] {
+  background-color: #b5b6b1;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.24);
+}
+.text-center {
+  text-align: center;
+}
+.small {
+  font-size: 1.4rem;
+  line-height: 1.3;
+}
+.divider {
+  display: flex;
+  margin: 36px auto;
+  max-width: 480px;
+  width: 100%;
+}
+.divider.thin {
+  margin: 12px auto;
+}
+.divider.thin .fas {
+  display: none;
+}
+.divider .fas {
+  color: #b5b6b1;
+  margin: 0 12px;
+}
+.divider hr {
+  border: none;
+  border-top: 1px #b5b6b1 solid;
+  flex: auto;
+}
+.icon-label {
+  align-items: center;
+  display: flex;
+  margin: 24px auto;
+  max-width: 480px;
+}
+.icon-label .fas,
+.icon-label .far,
+.icon-label .fab {
+  font-size: 2.8rem;
+  margin-right: 16px;
+  text-align: right;
+  width: 48px;
+}
+.icon-label .fa-exclamation-triangle {
+  color: #a85213;
+}
+.icon-label .icon-text {
+  max-width: 66%;
+}
+.top-nav a {
+  display: block;
+  padding: 8px;
+  text-align: center;
+}
+.top-nav a:hover {
+  color: #a85213;
+}
+.main-nav a {
+  color: #4d4833;
+  display: block;
+  font-size: 1.8rem;
+  padding: 8px;
+  text-align: center;
+}
+.main-nav a:hover {
+  color: #eee;
+}
+.main-nav .divider {
+  margin: 12px auto;
+  width: 50%;
+}
+.page-header {
+  color: #eee;
+  overflow: hidden;
+}
+.page-header header {
+  align-items: center;
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  height: 60vh;
+  justify-content: center;
+}
+.page-header header h3 {
+  font-weight: 300;
+}
+.page-header header .btn-book-your-adventure {
+  color: #eee;
+  font-family: 'Adlery Pro', serif;
+  margin-top: 48px;
+  font-size: 4.8rem;
+}
+.page-body > header {
+  overflow: auto;
+  padding: 48px 24px 0;
+}
+.page-body > header p {
+  margin: 24px auto;
+}
+.page-body article {
+  display: grid;
+  grid-gap: .5vh;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(12, 1fr);
+  margin-top: .5vh;
+}
+@media screen and (max-width: 768px) {
+  .page-body article {
+    display: block;
+  }
+}
+.page-body article .content-block,
+.page-body article .gallery-container {
+  grid-column: span 12;
+}
+.page-body article .content-block {
+  padding: 36px;
+}
+.page-body article .content-block header {
+  margin-top: 96px;
+}
+.page-body article .content-block header:first-of-type {
+  margin-top: 0;
+}
+.page-body article .content-block.timeline p {
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+.gallery-container {
+  display: grid;
+  grid-gap: .5vh;
+  grid-auto-flow: dense;
+  grid-auto-rows: 18vw;
+  grid-template-columns: repeat(auto-fill, minmax(24vw, 1fr));
+}
+.gallery-container img {
+  object-fit: cover;
+}
+.gallery-container .image-container:first-of-type,
+.gallery-container .image-container:nth-child(4n) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+@media screen and (max-width: 768px) {
+  .gallery-container .image-container:first-of-type,
+  .gallery-container .image-container:nth-child(4n) {
+    grid-column: span 4;
+  }
+}
+.gallery-container .image-container.tall-2 {
+  grid-row: span 2;
+}
+.gallery-container .image-container.tall-3 {
+  grid-row: span 3;
+}
+.gallery-container .image-container.tall-4 {
+  grid-row: span 4;
+}
+.gallery-container .image-container.tall-6 {
+  grid-row: span 6;
+}
+@media screen and (max-width: 768px) {
+  .gallery-container {
+    grid-auto-rows: 18vw;
+  }
+}
+.color-palette-section {
+  display: flex;
+  margin: 24px auto;
+  max-width: 480px;
+}
+.color-palette-section .color-palette-container {
+  text-align: center;
+  width: 100%;
+}
+.color-palette-section .color-palette-shade {
+  background-color: transparent;
+  border: 3px white solid;
+  border-radius: 50%;
+  height: 72px;
+  margin: auto;
+  width: 72px;
+}
+.color-palette-section .color-palette-shade.primary {
+  background-color: #ffe7e3;
+}
+.color-palette-section .color-palette-shade.secondary {
+  background-color: #c59595;
+}
+.color-palette-section .color-palette-shade.tertiary {
+  background-color: #6d693c;
+}
+.color-palette-section .color-palette-shade.quaternary {
+  background-color: #7d5c46;
+}
+@media screen and (max-width: 768px) {
+  .color-palette-section {
+    display: block;
+  }
+  .color-palette-section .color-palette-shade {
+    border-radius: 4px;
+    width: 100%;
+  }
+}
+.color-palette-section p {
+  font-size: 1.4rem;
+  margin: 6px;
+}
+.page.show {
+  opacity: 1;
+  transition-duration: 1s;
+}
+.page.delete {
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.page.home .page-header header {
+  background-image: url('../images/alexis-ray-engagement-29.jpg');
+}
+.page.accommodations .page-header header {
+  background-image: url('../images/alexis-ray-engagement-24.jpg');
+}
+.page.getting-there .page-header header {
+  background-image: url('../images/alexis-ray-engagement-32.jpg');
+}
+.page.getting-there .content-block,
+.page.getting-there .gallery-container {
+  grid-column: span 4;
+}
+.page.things-to-do .page-header header {
+  background-image: url('../images/alexis-ray-engagement-37.jpg');
+}
+.page.things-to-do .content-block {
+  grid-column: span 6;
+}
+.page.book-your-adventure .page-header header {
+  background-image: url('../images/alexis-ray-engagement-29.jpg');
+}
+.page.wedding-schedule .page-header header {
+  background-image: url('../images/alexis-ray-engagement-49.jpg');
+}
+.page.gallery .page-header header {
+  background-image: url('../images/alexis-ray-engagement-32.jpg');
+}
+.page.contact-us .page-header header {
+  background-image: url('../images/alexis-ray-engagement-102.jpg');
+}
+.page.faqs .page-header header {
+  background-image: url('../images/alexis-ray-engagement-66.jpg');
+}
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: 0.33s;
+  transition-timing-function: ease-in-out;
+  transition-property: opacity, transform;
+}
+.reveal.hide {
+  opacity: 0;
+  height: 0;
+  margin: 0 auto !important;
+  overflow: hidden;
+  padding: 0;
+  transform: translateY(-48px);
+}
