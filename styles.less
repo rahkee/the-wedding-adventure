@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Adlery Pro';
+    src: url('fonts/adlery-pro.swash.eot'); /* IE9 Compat Modes */
+    src: url('fonts/adlery-pro.swash.eot#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */ url('fonts/adlery-pro.swash.woff2') format('woff2'),
+        /* Super Modern Browsers */ url('fonts/AdleryPro-Swash.woff')
+            format('woff'),
+        /* Pretty Modern Browsers */ url('fonts/AdleryPro-Swash.ttf')
+            format('truetype'),
+        /* Safari, Android, iOS */ url('fonts/AdleryPro-Swash.svg#svgFontName')
+            format('svg'); /* Legacy iOS */
+}
+
+/* Colors */
+@beige: #d5d6d0;
+@black: #2a2a2a;
+@dark-beige: #b5b6b1;
+@highlight: #a85213;
+@red: #900;
+@white: #eee;
+@shadow: #4d4833;
+
+.heading-font() {
+    font-family: 'Adlery Pro', serif;
+}
+
+.reading-font() {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+}
+
+.transition() {
+    transition-duration: @seconds;
+    transition-timing-function: ease-in-out;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: @beige;
+    background-image: url('../images/bg-b.jpg');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: @black;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    overflow-y: scroll;
+    .reading-font;
+}
+
+h1 {
+    .heading-font;
+}
