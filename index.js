@@ -4,73 +4,123 @@ class ScreenArea extends React.Component {
         currentPage: "home"
     }
 
-    render() {
-        console.log(this.state);
+    loadCurrentPage = currentPageClicked => {
+        console.log(currentPageClicked);
+        
+        this.setState({ currentPage: currentPageClicked });
+    }
+
+    render() {        
         
         return (
             <React.Fragment>
-                <MainNav></MainNav>
+                {this.state.currentPage === 'home' ? <MainHome /> : ''}
 
-                <MainHome></MainHome>
+                {this.state.currentPage === 'lodging' ? (
+                    <Lodging />
+                ) : (
+                    ''
+                )}
 
-                <Accommodations></Accommodations>
+                {this.state.currentPage === 'contact-us' ? (
+                    <ContactUs />
+                ) : (
+                    ''
+                )}
 
-                <ContactUs></ContactUs>
-            
-                <Faqs></Faqs>
-        
-                <Gallery></Gallery>
-        
-                <GettingThere></GettingThere>
-        
-                <WeddingSchedule></WeddingSchedule>        
-        
-                <ThingsToDo></ThingsToDo>
+                {this.state.currentPage === 'faqs' ? <Faqs /> : ''}
+
+                {this.state.currentPage === 'gallery' ? (
+                    <Gallery />
+                ) : (
+                    ''
+                )}
+
+                {this.state.currentPage === 'getting-there' ? (
+                    <GettingThere />
+                ) : (
+                    ''
+                )}
+
+                {this.state.currentPage === 'wedding-schedule' ? (
+                    <WeddingSchedule />
+                ) : (
+                    ''
+                )}
+
+                {this.state.currentPage === 'things-to-do' ? (
+                    <ThingsToDo />
+                ) : (
+                    ''
+                )}
+
+                <MainNav fnLoadCurrentPage={this.loadCurrentPage} />
             </React.Fragment>
         );
     }
 };
 
-const MainNav = () => {
-    
+const MainNav = props => {
+
     return (
         <nav className="main-nav">
-            <div className="menu-group">
-                <a
-                    href="accommodations.html"
-                    data-attribute-name="accommodations"
-                >
-                    Accommodations
-                </a>
-                <a
-                    href="getting-there.html"
-                    data-attribute-name="getting-there"
-                >
-                    Getting There
-                </a>
-                <a
-                    href="schedule.html"
-                    data-attribute-name="wedding-schedule"
-                >
-                    Schedule
-                </a>
-                <a
-                    href="things-to-do.html"
-                    data-attribute-name="things-to-do"
-                >
-                    Things to Do
-                </a>
+            <button
+                onClick={() => {
+                    props.fnLoadCurrentPage('home');
+                }}
+            >
+                Home
+            </button>
+            <button
+                onClick={() => {
+                    props.fnLoadCurrentPage('lodging');
+                }}
+            >
+                Accommodations
+            </button>
+            <button
+                onClick={() => {
+                    props.fnLoadCurrentPage('getting-there');
+                }}
+            >
+                Getting There
+            </button>
+            <button
+                onClick={() => {
+                    props.fnLoadCurrentPage('wedding-schedule');
+                }}
+            >
+                Schedule
+            </button>
+            <button
+                onClick={() => {
+                    props.fnLoadCurrentPage('things-to-do');
+                }}
+            >
+                Things to Do
+            </button>
 
-                <a href="gallery.html" data-attribute-name="gallery">
-                    Gallery
-                </a>
-                <a href="contact-us.html" data-attribute-name="contact-us">
-                    Contact Us
-                </a>
-                <a href="faqs.html" data-attribute-name="faqs">
-                    FAQs
-                </a>
-            </div>
+            <button
+                onClick={() => {
+                    props.fnLoadCurrentPage('gallery');
+                }}
+            >
+                Gallery
+            </button>
+            <button
+                onClick={() => {
+                    props.fnLoadCurrentPage('contact-us');
+                }}
+            >
+                Contact Us
+            </button>
+            <button
+                onClick={() => {
+                    props.fnLoadCurrentPage('faqs');
+                }}
+            >
+                FAQs
+            </button>
         </nav>
     );
 }
@@ -91,22 +141,22 @@ const MainHome = () => {
     );
 }
 
-const Accommodations = () => {
+const Lodging = () => {
 
     return (
         <main
-            className="page accommodations"
-            data-attribute-page="accommodations"
+            className="page lodging"
+            data-attribute-page="lodging"
         >
             <div className="page-header">
                 <header>
-                    <h1>Accommodations</h1>
+                    <h1>Lodging</h1>
                 </header>
             </div>
 
             <div className="page-body">
                 <header>
-                    <h2>Accommodations</h2>
+                    <h2>Lodging</h2>
 
                     <p className="text-center">
                         Please email us your flight itinerary

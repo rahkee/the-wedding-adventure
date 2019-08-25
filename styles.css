@@ -11,17 +11,62 @@ html {
 }
 body {
   background-color: #d5d6d0;
-  background-image: url('images/bg-b.jpg');
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
   color: #2a2a2a;
   font-size: 1.6rem;
   line-height: 1.5;
-  overflow-y: scroll;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
 }
 h1 {
   font-family: 'Adlery Pro', serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+img {
+  max-width: 100%;
+}
+#root {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr auto;
+  height: 100vh;
+  overflow: hidden;
+}
+.main-nav {
+  background-color: #2a2a2a;
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: 1 / -1;
+  grid-row: 2 / -1;
+  justify-content: center;
+}
+.main-nav button {
+  background-color: transparent;
+  border: 0;
+  color: #d5d6d0;
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-decoration: none;
+  outline: none;
+  padding: 12px 24px;
+}
+.main-nav button:hover {
+  color: #a85213;
+}
+.page {
+  background-image: url('images/bg-b.jpg');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  height: calc(100vh - 88px);
+  overflow: auto;
 }
