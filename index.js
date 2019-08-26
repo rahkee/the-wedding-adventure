@@ -76,7 +76,7 @@ const MainNav = props => {
                     props.fnLoadCurrentPage('lodging');
                 }}
             >
-                Accommodations
+                Lodging
             </button>
             <button
                 onClick={() => {
@@ -132,8 +132,8 @@ const MainHome = () => {
             <div className="page-header">
                 <header>
                     <div>
-                        <h1>The Great Outdoor</h1>
-                        <h4>Alexis and Ray's Wedding</h4>
+                        <h1>The Great Outdoors</h1>
+                        <h4>Alexis & Ray's Wedding Adventure</h4>
                     </div>
                 </header>
             </div>
