@@ -1,7 +1,7 @@
 class ScreenArea extends React.Component {
 
     state = {
-        currentPage: "lodging",
+        currentPage: "home",
         menuToggleState: false
     }
 
@@ -80,7 +80,7 @@ const MainNav = props => {
                         props.fnMenuToggle();
                     }}
                 >
-                    <span>{props.menuState ? 'CLOSE' : 'MENU'}</span>
+                    {props.menuState ? 'CLOSE' : 'MENU'}
                 </button>
                 <button
                     onClick={() => {

@@ -55,6 +55,7 @@ h6 {
 }
 
 img {
+    display: block;
     max-width: 100%;
 }
 
@@ -96,10 +97,6 @@ img {
     transition-property: background-color, transform;
     transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
     width: 100vw;
-
-    .divider {
-        margin-bottom: 24px;
-    }
 
     button {
         background-color: transparent;
@@ -146,7 +143,7 @@ img {
 }
 
 .page {
-    height: ~'calc(100vh - 162px)';
+    height: ~'calc(100vh - 64px)';
     overflow: auto;
     padding: 32px;
 }
@@ -167,12 +164,20 @@ img {
     }
 }
 
+.page-body {
+    article:last-of-type {
+        padding-bottom: 96px;
+    }
+}
+
 .home {
     background-image: url('images/alexis-ray-engagement-29.jpg');
     background-size: cover;
+    background-position: center center;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 32px;
 
     header {
         color: @white;
