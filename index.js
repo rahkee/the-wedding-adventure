@@ -1,6 +1,6 @@
 class ScreenArea extends React.Component {
     state = {
-        currentPage: 'faqs',
+        currentPage: 'wedding-schedule',
         menuToggleState: false,
     };
 
@@ -30,12 +30,6 @@ class ScreenArea extends React.Component {
                 {this.state.currentPage === 'lodging' ? <Lodging /> : ''}
 
                 {this.state.currentPage === 'our-history' ? <Gallery /> : ''}
-
-                {this.state.currentPage === 'things-to-do' ? (
-                    <ThingsToDo />
-                ) : (
-                    ''
-                )}
 
                 {this.state.currentPage === 'wedding-schedule' ? (
                     <WeddingSchedule />
@@ -67,7 +61,7 @@ const MainNav = props => {
                         props.fnMenuToggle();
                     }}
                 >
-                    {props.menuState ? 'CLOSE' : 'MENU'}
+                    {props.menuState ? 'HIDE MENU' : 'MENU'}
                 </button>
 
                 <button
@@ -113,15 +107,6 @@ const MainNav = props => {
                     }}
                 >
                     Our History
-                </button>
-
-                <button
-                    onClick={() => {
-                        props.fnLoadCurrentPage('things-to-do');
-                        props.fnMenuToggle();
-                    }}
-                >
-                    Things to Do
                 </button>
 
                 <button
@@ -923,10 +908,16 @@ const GettingThere = () => {
                         </header>
 
                         <p>
-                            The wedding ceremony will be held at Sunwolf.
-                            Sunwolf is an hour and thirty minutes away from the
-                            airport. The venue itself and the surrounding area
-                            have lodging available.
+                            The wedding ceremony will be held at{' '}
+                            <a
+                                href="https://g.page/sunwolfbc?share"
+                                title="Directions to Sunwolf"
+                            >
+                                Sunwolf
+                            </a>
+                            . Sunwolf is an hour and thirty minutes away from
+                            the airport. The venue itself and the surrounding
+                            area have lodging available.
                         </p>
 
                         <h6>Address</h6>
@@ -962,8 +953,13 @@ const Lodging = () => {
 
                         <h6>Address</h6>
                         <p>
-                            70002 Squamish Valley Rd, Brackendale, BC V0N 1H0,
-                            Canada
+                            <a
+                                href="https://g.page/sunwolfbc?share"
+                                title="Directions to Sunwolf"
+                            >
+                                70002 Squamish Valley Rd, Brackendale, BC V0N
+                                1H0, Canada
+                            </a>
                         </p>
 
                         <h6>Check-In</h6>
@@ -1092,158 +1088,6 @@ const Lodging = () => {
     );
 };
 
-const ThingsToDo = () => {
-    return (
-        <main className="page things-to-do">
-            <div className="page-header">
-                <header>
-                    <h2>Things to Do</h2>
-                </header>
-            </div>
-
-            <div className="page-body">
-                <article>
-                    <div className="content-block">
-                        <div className="divider">
-                            <i className="fas fa-tree" />
-                            <hr />
-                        </div>
-
-                        <header>
-                            <h4>Sea-to-Sky Gondola</h4>
-                            <h5>Brunch with Scenic Views</h5>
-                        </header>
-
-                        <div className="divider">
-                            <i className="fas fa-tree" />
-                            <hr />
-                        </div>
-
-                        <p>
-                            We will take the gondola up and enjoy brunch and
-                            scenic views of beautiful British Columbia.
-                        </p>
-
-                        <h6>Location</h6>
-                        <p>36800 BC-99, Squamish, BC V0n 3G0, Canada</p>
-
-                        <h6>Website</h6>
-                        <p>
-                            <a
-                                href="https://www.seatoskygondola.com/"
-                                title="Sea-to-Sky Gondola"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Sea-to-Sky Gondola
-                            </a>
-                        </p>
-
-                        <h6>Cost</h6>
-                        <p>$30 USD</p>
-
-                        <div className="icon-label">
-                            <i className="fas fa-exclamation-triangle" />
-                            <span className="icon-text small">
-                                Advanced trails available requiring appropriate
-                                hiking gear.
-                            </span>
-                        </div>
-                    </div>
-
-                    <div className="content-block">
-                        <header>
-                            <h4>Picnic on Alice Lake</h4>
-                            <h5>Kayaks and Longboards Available</h5>
-                        </header>
-
-                        <div className="divider">
-                            <i className="fas fa-tree" />
-                            <hr />
-                        </div>
-
-                        <p>
-                            Slather on some sunblock and swim, paddle or kayak
-                            on Alice Lake. Bring food and snacks!
-                        </p>
-
-                        <h6>Location</h6>
-                        <p>BC-99, Squamish, BC V0N 1H0, Canada</p>
-
-                        <h6>Website</h6>
-                        <p>
-                            <a
-                                href="http://www.env.gov.bc.ca/bcparks/explore/parkpgs/alice_lk/"
-                                title="Explore Alice Lake"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Explore Alice Lake
-                            </a>
-                        </p>
-
-                        <h6>Cost</h6>
-                        <p>FREE</p>
-                    </div>
-
-                    <div className="content-block">
-                        <header>
-                            <h4>Whistler Blackcomb</h4>
-                            <h5>Tree Walks and Ziplines</h5>
-                        </header>
-
-                        <div className="divider">
-                            <i className="fas fa-tree" />
-                            <hr />
-                        </div>
-
-                        <p>
-                            Walking on tree canopies for sightseeing or beginner
-                            to advanced ziplining for touring, choose your own
-                            adventure!
-                        </p>
-
-                        <h6>Location</h6>
-                        <p>4545 Blackcomb Way, Whistler, BC V0N 1B4, Canada</p>
-
-                        <h6>Website</h6>
-                        <p>
-                            <a
-                                href="https://squamishadventure.com/portfolio/ziptreck-zipline-tours-squamish-whistler/"
-                                title="Squamish/Whistler, Ziptrek and Zipline Tours"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Squamish/Whistler, Ziptrek and Zipline Tours
-                            </a>
-                        </p>
-
-                        <h6>Cost</h6>
-                        <p>Depends on Tour Package</p>
-                    </div>
-
-                    <div className="content-block">
-                        <header>
-                            <h4>Other Things to Do</h4>
-                        </header>
-
-                        <div className="divider">
-                            <i className="fas fa-tree" />
-                            <hr />
-                        </div>
-
-                        <p>
-                            Whale watching, rock climbing, waterfalls, hikes,
-                            mountain-biking, white-water rafting, rope courses,
-                            canyoneering, kite-boarding and windsurfing.
-                        </p>
-                    </div>
-                </article>
-            </div>
-        </main>
-    );
-};
-
 const WeddingSchedule = () => {
     return (
         <main className="page wedding-schedule">
@@ -1254,17 +1098,6 @@ const WeddingSchedule = () => {
             </div>
 
             <div className="page-body">
-                <header>
-                    <h2>Weekend Schedule</h2>
-
-                    <p>
-                        Join us on scheduled activities for Friday, Saturday,
-                        and Sunday! You may do your own excursions for the rest
-                        of the time, or you are welcome to join us on ours! This
-                        is what we have planned...
-                    </p>
-                </header>
-
                 <article>
                     <div className="content-block">
                         <div className="divider">
@@ -1272,9 +1105,16 @@ const WeddingSchedule = () => {
                             <hr />
                         </div>
 
+                        <p>
+                            Join us on scheduled activities for Friday,
+                            Saturday, and Sunday! You may do your own excursions
+                            for the rest of the time, or you are welcome to join
+                            us on ours! This is what we have planned...
+                        </p>
+
                         <header>
-                            <h4>Day One</h4>
-                            <h5>Friday, September 20th, 2019</h5>
+                            <h3>Day One</h3>
+                            <h4>Friday, September 20th</h4>
                         </header>
 
                         <div className="divider">
@@ -1285,22 +1125,15 @@ const WeddingSchedule = () => {
                         <p>
                             Arrive at YVR International Airport and drive to{' '}
                             <a
-                                href="http://www.sunwolf.net/weddingsevents/"
-                                title="Visit the Sunwolf Website"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                href="https://g.page/sunwolfbc?share"
+                                title="Directions to Sunwolf"
                             >
                                 Sunwolf
                             </a>
                         </p>
 
                         <h6>4:00pm</h6>
-                        <p>
-                            <a href="#accommodations" title="Check In">
-                                Check In
-                            </a>{' '}
-                            to Sunwolf
-                        </p>
+                        <p>Check-in to Sunwolf</p>
 
                         <h6>BBQ and Rehearsals</h6>
                         <p>BBQ provided by Cecilia Mopera and Robert Tejada</p>
@@ -1325,8 +1158,8 @@ const WeddingSchedule = () => {
                 <article>
                     <div className="content-block">
                         <header>
-                            <h4>Day Two</h4>
-                            <h5>Saturday, September 21st, 2019</h5>
+                            <h3>Day Two</h3>
+                            <h4>Saturday, September 21st</h4>
                         </header>
 
                         <div className="divider">
@@ -1364,8 +1197,8 @@ const WeddingSchedule = () => {
                 <article>
                     <div className="content-block">
                         <header>
-                            <h4>Day Three</h4>
-                            <h5>Sunday, September 22nd, 2019</h5>
+                            <h3>Day Three</h3>
+                            <h4>Sunday, September 22nd</h4>
                         </header>
 
                         <div className="divider">
@@ -1406,8 +1239,8 @@ const WeddingSchedule = () => {
                 <article>
                     <div className="content-block">
                         <header>
-                            <h4>Day Four</h4>
-                            <h5>Monday, September 23rd, 2019</h5>
+                            <h3>Day Four</h3>
+                            <h4>Monday, September 23rd</h4>
                         </header>
 
                         <div className="divider">
@@ -1440,8 +1273,8 @@ const WeddingSchedule = () => {
                 <article>
                     <div className="content-block">
                         <header>
-                            <h4>Day Five</h4>
-                            <h5>Tuesday, September 24th, 2019</h5>
+                            <h3>Day Five</h3>
+                            <h4>Tuesday, September 24th</h4>
                         </header>
 
                         <div className="divider">
@@ -1454,14 +1287,6 @@ const WeddingSchedule = () => {
 
                         <h6>11:00am</h6>
                         <p>Check Out from Sunwolf Lodging</p>
-
-                        <p className="small">
-                            You may stay longer for more adventures!{' '}
-                            <a href="" title="">
-                                Click here
-                            </a>{' '}
-                            for other adventure and lodging options!
-                        </p>
                     </div>
                     <div className="gallery-container">
                         <div className="image-container">
