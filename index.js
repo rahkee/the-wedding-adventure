@@ -1,13 +1,18 @@
 class ScreenArea extends React.Component {
 
     state = {
-        currentPage: "home"
+        currentPage: "lodging",
+        menuToggleState: false
     }
 
     loadCurrentPage = currentPageClicked => {
         console.log(currentPageClicked);
         
         this.setState({ currentPage: currentPageClicked });
+    }
+
+    menuToggle = () => {
+        this.setState({ menuToggleState: !this.state.menuToggleState})
     }
 
     render() {        
@@ -54,7 +59,7 @@ class ScreenArea extends React.Component {
                     ''
                 )}
 
-                <MainNav fnLoadCurrentPage={this.loadCurrentPage} />
+                <MainNav fnLoadCurrentPage={this.loadCurrentPage} fnMenuToggle={this.menuToggle} menuState={this.state.menuToggleState} />
             </React.Fragment>
         );
     }
@@ -63,65 +68,79 @@ class ScreenArea extends React.Component {
 const MainNav = props => {
 
     return (
-        <nav className="main-nav">
-            <button
-                onClick={() => {
-                    props.fnLoadCurrentPage('home');
-                }}
+        <React.Fragment>
+            <nav
+                className={`main-nav ${
+                    props.menuState ? 'main-nav-opened' : 'main-nav-closed'
+                }`}
             >
-                Home
-            </button>
-            <button
-                onClick={() => {
-                    props.fnLoadCurrentPage('lodging');
-                }}
-            >
-                Lodging
-            </button>
-            <button
-                onClick={() => {
-                    props.fnLoadCurrentPage('getting-there');
-                }}
-            >
-                Getting There
-            </button>
-            <button
-                onClick={() => {
-                    props.fnLoadCurrentPage('wedding-schedule');
-                }}
-            >
-                Schedule
-            </button>
-            <button
-                onClick={() => {
-                    props.fnLoadCurrentPage('things-to-do');
-                }}
-            >
-                Things to Do
-            </button>
+                <button
+                    className="menu-toggle"
+                    onClick={() => {
+                        props.fnMenuToggle();
+                    }}
+                >
+                    <span>{props.menuState ? 'CLOSE' : 'MENU'}</span>
+                </button>
+                <button
+                    onClick={() => {
+                        props.fnLoadCurrentPage('lodging');
+                        props.fnMenuToggle();
+                    }}
+                >
+                    Lodging
+                </button>
+                <button
+                    onClick={() => {
+                        props.fnLoadCurrentPage('getting-there');
+                        props.fnMenuToggle();
+                    }}
+                >
+                    Getting There
+                </button>
+                <button
+                    onClick={() => {
+                        props.fnLoadCurrentPage('wedding-schedule');
+                        props.fnMenuToggle();
+                    }}
+                >
+                    Schedule
+                </button>
+                <button
+                    onClick={() => {
+                        props.fnLoadCurrentPage('things-to-do');
+                        props.fnMenuToggle();
+                    }}
+                >
+                    Things to Do
+                </button>
 
-            <button
-                onClick={() => {
-                    props.fnLoadCurrentPage('gallery');
-                }}
-            >
-                Gallery
-            </button>
-            <button
-                onClick={() => {
-                    props.fnLoadCurrentPage('contact-us');
-                }}
-            >
-                Contact Us
-            </button>
-            <button
-                onClick={() => {
-                    props.fnLoadCurrentPage('faqs');
-                }}
-            >
-                FAQs
-            </button>
-        </nav>
+                <button
+                    onClick={() => {
+                        props.fnLoadCurrentPage('gallery');
+                        props.fnMenuToggle();
+                    }}
+                >
+                    Gallery
+                </button>
+                <button
+                    onClick={() => {
+                        props.fnLoadCurrentPage('contact-us');
+                        props.fnMenuToggle();
+                    }}
+                >
+                    Contact Us
+                </button>
+                <button
+                    onClick={() => {
+                        props.fnLoadCurrentPage('faqs');
+                        props.fnMenuToggle();
+                    }}
+                >
+                    FAQs
+                </button>
+            </nav>
+        </React.Fragment>
     );
 }
 
@@ -132,7 +151,9 @@ const MainHome = () => {
             <div className="page-header">
                 <header>
                     <div>
-                        <h1>The Great Outdoors</h1>
+                        <h1>
+                            The Great <span>Outdoors</span>
+                        </h1>
                         <h4>Alexis & Ray's Wedding Adventure</h4>
                     </div>
                 </header>
