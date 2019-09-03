@@ -30,6 +30,9 @@ h1,
 h3 {
   font-family: 'Adlery Pro', serif;
 }
+h2 {
+  line-height: 1.3;
+}
 h4 {
   margin-bottom: 12px;
 }
@@ -80,6 +83,7 @@ img {
   padding: 4px;
   margin: 0 auto;
   width: max-content;
+  max-width: 100%;
 }
 .divider {
   justify-items: center;
@@ -102,6 +106,36 @@ img {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   width: 100%;
+}
+.color-palette-section {
+  display: block;
+  margin: 24px auto;
+  max-width: 480px;
+}
+.color-palette-section .color-palette-container {
+  text-align: center;
+  width: 100%;
+}
+.color-palette-section .color-palette-shade {
+  background-color: transparent;
+  border-radius: 4px;
+  height: 72px;
+  width: 100%;
+}
+.color-palette-section .color-palette-shade.primary {
+  background-color: #ffe7e3;
+}
+.color-palette-section .color-palette-shade.secondary {
+  background-color: #c59595;
+}
+.color-palette-section .color-palette-shade.tertiary {
+  background-color: #6d693c;
+}
+.color-palette-section .color-palette-shade.quaternary {
+  background-color: #7d5c46;
+}
+.color-palette-section p {
+  margin: 6px auto 12px;
 }
 .main-nav {
   background-color: #a1a29c;

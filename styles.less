@@ -56,6 +56,10 @@ h3 {
     .heading-font;
 }
 
+h2 {
+    line-height: 1.3;
+}
+
 h4 {
     margin-bottom: 12px;
 }
@@ -119,6 +123,7 @@ img {
     padding: 4px;
     margin: 0 auto;
     width: max-content;
+    max-width: 100%;
 }
 
 .divider {
@@ -143,6 +148,49 @@ img {
         grid-column: ~'1 / -1';
         grid-row: ~'1 / -1';
         width: 100%;
+    }
+}
+
+@color-palette-a: #ffe7e3;
+@color-palette-b: #c59595;
+@color-palette-c: #6d693c;
+@color-palette-d: #7d5c46;
+
+.color-palette-section {
+    display: block;
+    margin: 24px auto;
+    max-width: 480px;
+
+    .color-palette-container {
+        text-align: center;
+        width: 100%;
+    }
+
+    .color-palette-shade {
+        background-color: transparent;
+        border-radius: 4px;
+        height: 72px;
+        width: 100%;
+
+        &.primary {
+            background-color: @color-palette-a;
+        }
+
+        &.secondary {
+            background-color: @color-palette-b;
+        }
+
+        &.tertiary {
+            background-color: @color-palette-c;
+        }
+
+        &.quaternary {
+            background-color: @color-palette-d;
+        }
+    }
+
+    p {
+        margin: 6px auto 12px;
     }
 }
 

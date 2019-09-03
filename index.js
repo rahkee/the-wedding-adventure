@@ -1,12 +1,10 @@
 class ScreenArea extends React.Component {
     state = {
-        currentPage: 'contact-us',
+        currentPage: 'faqs',
         menuToggleState: false,
     };
 
     loadCurrentPage = currentPageClicked => {
-        console.log(currentPageClicked);
-
         this.setState({ currentPage: currentPageClicked });
     };
 
@@ -17,15 +15,9 @@ class ScreenArea extends React.Component {
     render() {
         return (
             <React.Fragment>
-                {this.state.currentPage === 'home' ? <MainHome /> : ''}
-
-                {this.state.currentPage === 'lodging' ? <Lodging /> : ''}
-
                 {this.state.currentPage === 'contact-us' ? <ContactUs /> : ''}
 
                 {this.state.currentPage === 'faqs' ? <Faqs /> : ''}
-
-                {this.state.currentPage === 'gallery' ? <Gallery /> : ''}
 
                 {this.state.currentPage === 'getting-there' ? (
                     <GettingThere />
@@ -33,14 +25,20 @@ class ScreenArea extends React.Component {
                     ''
                 )}
 
-                {this.state.currentPage === 'wedding-schedule' ? (
-                    <WeddingSchedule />
+                {this.state.currentPage === 'home' ? <MainHome /> : ''}
+
+                {this.state.currentPage === 'lodging' ? <Lodging /> : ''}
+
+                {this.state.currentPage === 'our-history' ? <Gallery /> : ''}
+
+                {this.state.currentPage === 'things-to-do' ? (
+                    <ThingsToDo />
                 ) : (
                     ''
                 )}
 
-                {this.state.currentPage === 'things-to-do' ? (
-                    <ThingsToDo />
+                {this.state.currentPage === 'wedding-schedule' ? (
+                    <WeddingSchedule />
                 ) : (
                     ''
                 )}
@@ -71,14 +69,25 @@ const MainNav = props => {
                 >
                     {props.menuState ? 'CLOSE' : 'MENU'}
                 </button>
+
                 <button
                     onClick={() => {
-                        props.fnLoadCurrentPage('lodging');
+                        props.fnLoadCurrentPage('contact-us');
                         props.fnMenuToggle();
                     }}
                 >
-                    Lodging
+                    Contact Us
                 </button>
+
+                <button
+                    onClick={() => {
+                        props.fnLoadCurrentPage('faqs');
+                        props.fnMenuToggle();
+                    }}
+                >
+                    FAQs
+                </button>
+
                 <button
                     onClick={() => {
                         props.fnLoadCurrentPage('getting-there');
@@ -87,14 +96,25 @@ const MainNav = props => {
                 >
                     Getting There
                 </button>
+
                 <button
                     onClick={() => {
-                        props.fnLoadCurrentPage('wedding-schedule');
+                        props.fnLoadCurrentPage('lodging');
                         props.fnMenuToggle();
                     }}
                 >
-                    Schedule
+                    Lodging
                 </button>
+
+                <button
+                    onClick={() => {
+                        props.fnLoadCurrentPage('our-history');
+                        props.fnMenuToggle();
+                    }}
+                >
+                    Our History
+                </button>
+
                 <button
                     onClick={() => {
                         props.fnLoadCurrentPage('things-to-do');
@@ -106,27 +126,11 @@ const MainNav = props => {
 
                 <button
                     onClick={() => {
-                        props.fnLoadCurrentPage('gallery');
+                        props.fnLoadCurrentPage('wedding-schedule');
                         props.fnMenuToggle();
                     }}
                 >
-                    Gallery
-                </button>
-                <button
-                    onClick={() => {
-                        props.fnLoadCurrentPage('contact-us');
-                        props.fnMenuToggle();
-                    }}
-                >
-                    Contact Us
-                </button>
-                <button
-                    onClick={() => {
-                        props.fnLoadCurrentPage('faqs');
-                        props.fnMenuToggle();
-                    }}
-                >
-                    FAQs
+                    Schedule
                 </button>
             </nav>
         </React.Fragment>
@@ -135,7 +139,7 @@ const MainNav = props => {
 
 const MainHome = () => {
     return (
-        <main className="page home" data-attribute-page="home">
+        <main className="page home">
             <div className="page-header">
                 <header>
                     <div>
@@ -152,7 +156,7 @@ const MainHome = () => {
 
 const ContactUs = () => {
     return (
-        <main className="page contact-us" data-attribute-page="contact-us">
+        <main className="page contact-us">
             <div className="page-header">
                 <header>
                     <h2>Contact Us</h2>
@@ -239,7 +243,7 @@ const ContactUs = () => {
 
 const Faqs = () => {
     return (
-        <main className="page faqs" data-attribute-page="faqs">
+        <main className="page faqs">
             <div className="page-header">
                 <header>
                     <h2>Frequently Asked Questions</h2>
@@ -249,43 +253,6 @@ const Faqs = () => {
             <div className="page-body">
                 <article>
                     <div className="content-block">
-                        <div className="divider">
-                            <i className="fas fa-tree" />
-                            <hr />
-                        </div>
-
-                        <h6>Where is the registry?</h6>
-                        <p>
-                            We couldn't ask for a better gift than for our
-                            friends and family to join us on our wedding day and
-                            the excursions afterwards.
-                        </p>
-
-                        <div className="divider">
-                            <i className="fas fa-tree" />
-                            <hr />
-                        </div>
-
-                        <h6>Can we bring our kids?</h6>
-                        <p>
-                            Of course! This is a family-friendly event. Price
-                            for kids' accommodations are the same as adults.
-                            Please be aware that this location is an open forest
-                            area with a nearby river and a lake.
-                        </p>
-
-                        <div className="divider">
-                            <i className="fas fa-tree" />
-                            <hr />
-                        </div>
-
-                        <h6>What should I wear?</h6>
-                        <p>
-                            Check the weather often in preparation for the trip.
-                            Rain is a possibility. Dress comfortable for the
-                            excursions and formal wear for the wedding.
-                        </p>
-
                         <div className="divider">
                             <i className="fas fa-tree" />
                             <hr />
@@ -319,31 +286,6 @@ const Faqs = () => {
                             <hr />
                         </div>
 
-                        <h6>
-                            Why do boarding passes vary from guest to guest?
-                        </h6>
-                        <p>
-                            The number of boarding passes is the number of
-                            wedding guests you are allowed to bring including
-                            yourself. Although these are provided, please do not
-                            feel obliged to to use all of them! Just{' '}
-                            <a
-                                href="book-your-adventure.html"
-                                className="btn-book-your-adventure"
-                                data-attribute-name="book-your-adventure"
-                            >
-                                RSVP
-                            </a>{' '}
-                            accordingly. Unused boarding passes are
-                            non-transferable. We provided extra passes for our
-                            immediate family's kids!
-                        </p>
-
-                        <div className="divider">
-                            <i className="fas fa-tree" />
-                            <hr />
-                        </div>
-
                         <h6>Please. No phones out during the ceremony.</h6>
                         <p>
                             This is more of a PSA than an FAQ but we request
@@ -351,6 +293,30 @@ const Faqs = () => {
                             experience with us. We have hired professional
                             photographers for the job of capturing the whole
                             event.
+                        </p>
+
+                        <div className="divider">
+                            <i className="fas fa-tree" />
+                            <hr />
+                        </div>
+
+                        <h6>Where is the registry?</h6>
+                        <p>
+                            We couldn't ask for a better gift than for our
+                            friends and family to join us on our wedding day and
+                            the excursions afterwards.
+                        </p>
+
+                        <div className="divider">
+                            <i className="fas fa-tree" />
+                            <hr />
+                        </div>
+
+                        <h6>What should I wear?</h6>
+                        <p>
+                            Check the weather often in preparation for the trip.
+                            Rain is a possibility. Dress comfortable for the
+                            excursions and formal wear for the wedding.
                         </p>
                     </div>
                 </article>
@@ -361,7 +327,7 @@ const Faqs = () => {
 
 const Gallery = () => {
     return (
-        <main className="page gallery" data-attribute-page="gallery">
+        <main className="page gallery">
             <div className="page-header">
                 <header>
                     <h2>Gallery</h2>
@@ -885,10 +851,7 @@ const Gallery = () => {
 
 const GettingThere = () => {
     return (
-        <main
-            className="page getting-there"
-            data-attribute-page="getting-there"
-        >
+        <main className="page getting-there">
             <div className="page-header">
                 <header>
                     <h2>Getting There</h2>
@@ -904,46 +867,8 @@ const GettingThere = () => {
                         </div>
 
                         <header>
-                            <h4>Passports</h4>
-                        </header>
-
-                        <div className="divider">
-                            <i className="fas fa-tree" />
-                            <hr />
-                        </div>
-
-                        <p>
-                            You must have a passport to cross the United States
-                            / Canadian border.
-                        </p>
-
-                        <h6>Where to Apply</h6>
-                        <p>
-                            Visit the{' '}
-                            <a
-                                href="https://travel.state.gov/content/travel/en/passports.html"
-                                title="Visit Travel.State.Gov, U.S. Department of State"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                U.S. Government Travel State
-                            </a>{' '}
-                            website.
-                        </p>
-
-                        <h6>Cost</h6>
-                        <p>$145 USD</p>
-                    </div>
-
-                    <div className="content-block">
-                        <header>
                             <h4>Flights and Car Rentals</h4>
                         </header>
-
-                        <div className="divider">
-                            <i className="fas fa-tree" />
-                            <hr />
-                        </div>
 
                         <p>
                             Book flights that arrive in Vancouver YVR Airport.
@@ -978,7 +903,7 @@ const GettingThere = () => {
                         </p>
 
                         <div className="icon-label">
-                            <i className="fas fa-exclamation-triangle" />
+                            <i className="fas fa-exclamation-triangle" />{' '}
                             <span className="icon-text small">
                                 Please allow enough time for transportation and
                                 do your best to get to the venue to check-in at
@@ -988,14 +913,14 @@ const GettingThere = () => {
                     </div>
 
                     <div className="content-block">
-                        <header>
-                            <h4>The Venue</h4>
-                        </header>
-
                         <div className="divider">
                             <i className="fas fa-tree" />
                             <hr />
                         </div>
+
+                        <header>
+                            <h4>The Venue</h4>
+                        </header>
 
                         <p>
                             The wedding ceremony will be held at Sunwolf.
@@ -1006,20 +931,10 @@ const GettingThere = () => {
 
                         <h6>Address</h6>
                         <p>
-                            70002 Squamish Valley Rd, Brackendale, BC V0N 1H0,
-                            Canada
-                        </p>
-
-                        <h6>Cost</h6>
-                        <p>
-                            See the{' '}
-                            <a
-                                href="accommodations.html"
-                                data-attribute-name="accommodations"
-                            >
-                                Accommodations
-                            </a>{' '}
-                            page.
+                            <a href="https://g.page/sunwolfbc?share">
+                                70002 Squamish Valley Rd, Brackendale, BC V0N
+                                1H0, Canada
+                            </a>
                         </p>
                     </div>
                 </article>
@@ -1030,7 +945,7 @@ const GettingThere = () => {
 
 const Lodging = () => {
     return (
-        <main className="page lodging" data-attribute-page="lodging">
+        <main className="page lodging">
             <div className="page-header">
                 <header>
                     <h2>Sunwolf Lodging</h2>
@@ -1179,7 +1094,7 @@ const Lodging = () => {
 
 const ThingsToDo = () => {
     return (
-        <main className="page things-to-do" data-attribute-page="things-to-do">
+        <main className="page things-to-do">
             <div className="page-header">
                 <header>
                     <h2>Things to Do</h2>
@@ -1331,10 +1246,7 @@ const ThingsToDo = () => {
 
 const WeddingSchedule = () => {
     return (
-        <main
-            className="page wedding-schedule"
-            data-attribute-page="wedding-schedule"
-        >
+        <main className="page wedding-schedule">
             <div className="page-header">
                 <header>
                     <h2>Wedding Schedule</h2>

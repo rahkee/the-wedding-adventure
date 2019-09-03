@@ -95,7 +95,7 @@ a {
   text-decoration: none;
 }
 a[disabled] {
-  opacity: .24;
+  opacity: 0.24;
   pointer-events: none;
 }
 img {
@@ -158,9 +158,9 @@ fieldset .choice-block label {
   margin-top: 1px;
   width: calc(100% - 48px);
 }
-fieldset input[type="email"],
-fieldset input[type="submit"],
-fieldset input[type="text"],
+fieldset input[type='email'],
+fieldset input[type='submit'],
+fieldset input[type='text'],
 fieldset select,
 fieldset textarea {
   border: none;
@@ -170,11 +170,11 @@ fieldset textarea {
   padding: 12px 24px;
   width: calc(100% - 48px);
 }
-fieldset input[type="submit"],
+fieldset input[type='submit'],
 fieldset select {
   width: unset;
 }
-fieldset input[type="submit"] {
+fieldset input[type='submit'] {
   background-color: #b5b6b1;
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.24);
 }
@@ -279,10 +279,10 @@ fieldset input[type="submit"] {
 }
 .page-body article {
   display: grid;
-  grid-gap: .5vh;
+  grid-gap: 0.5vh;
   grid-auto-flow: dense;
   grid-template-columns: repeat(12, 1fr);
-  margin-top: .5vh;
+  margin-top: 0.5vh;
 }
 @media screen and (max-width: 768px) {
   .page-body article {
@@ -308,7 +308,7 @@ fieldset input[type="submit"] {
 }
 .gallery-container {
   display: grid;
-  grid-gap: .5vh;
+  grid-gap: 0.5vh;
   grid-auto-flow: dense;
   grid-auto-rows: 18vw;
   grid-template-columns: repeat(auto-fill, minmax(24vw, 1fr));
@@ -343,48 +343,6 @@ fieldset input[type="submit"] {
   .gallery-container {
     grid-auto-rows: 18vw;
   }
-}
-.color-palette-section {
-  display: flex;
-  margin: 24px auto;
-  max-width: 480px;
-}
-.color-palette-section .color-palette-container {
-  text-align: center;
-  width: 100%;
-}
-.color-palette-section .color-palette-shade {
-  background-color: transparent;
-  border: 3px white solid;
-  border-radius: 50%;
-  height: 72px;
-  margin: auto;
-  width: 72px;
-}
-.color-palette-section .color-palette-shade.primary {
-  background-color: #ffe7e3;
-}
-.color-palette-section .color-palette-shade.secondary {
-  background-color: #c59595;
-}
-.color-palette-section .color-palette-shade.tertiary {
-  background-color: #6d693c;
-}
-.color-palette-section .color-palette-shade.quaternary {
-  background-color: #7d5c46;
-}
-@media screen and (max-width: 768px) {
-  .color-palette-section {
-    display: block;
-  }
-  .color-palette-section .color-palette-shade {
-    border-radius: 4px;
-    width: 100%;
-  }
-}
-.color-palette-section p {
-  font-size: 1.4rem;
-  margin: 6px;
 }
 .page.show {
   opacity: 1;

@@ -1,11 +1,14 @@
 @font-face {
     font-family: 'Adlery Pro';
     src: url('../fonts/adlery-pro.swash.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/adlery-pro.swash.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/adlery-pro.swash.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/AdleryPro-Swash.woff') format('woff'), /* Pretty Modern Browsers */
-    url('../fonts/AdleryPro-Swash.ttf')  format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/AdleryPro-Swash.svg#svgFontName') format('svg'); /* Legacy iOS */
+    src: url('../fonts/adlery-pro.swash.eot#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */ url('../fonts/adlery-pro.swash.woff2') format('woff2'),
+        /* Super Modern Browsers */ url('../fonts/AdleryPro-Swash.woff')
+            format('woff'),
+        /* Pretty Modern Browsers */ url('../fonts/AdleryPro-Swash.ttf')
+            format('truetype'),
+        /* Safari, Android, iOS */
+            url('../fonts/AdleryPro-Swash.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 /* Colors */
@@ -17,7 +20,7 @@
 @white: #eee;
 @shadow: #4d4833;
 
-@seconds: .33s;
+@seconds: 0.33s;
 
 .heading-font() {
     font-family: 'Adlery Pro', serif;
@@ -50,7 +53,12 @@ body {
     .reading-font;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
 
     + p {
@@ -58,7 +66,9 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     .heading-font;
     text-align: center;
 }
@@ -107,7 +117,8 @@ p {
     }
 }
 
-strong, em {
+strong,
+em {
     font-weight: 400;
 
     &.text-highlight {
@@ -122,7 +133,7 @@ a {
     text-decoration: none;
 
     &[disabled] {
-        opacity: .24;
+        opacity: 0.24;
         pointer-events: none;
     }
 }
@@ -154,7 +165,8 @@ fieldset {
         text-align: center;
     }
 
-    h5, p {
+    h5,
+    p {
         margin-bottom: 6px;
         max-width: unset;
         text-align: unset;
@@ -181,7 +193,8 @@ fieldset {
         overflow: auto;
         padding: 6px 12px;
 
-        input, label {
+        input,
+        label {
             float: left;
         }
 
@@ -191,13 +204,13 @@ fieldset {
 
         label {
             margin-top: 1px;
-            width: ~"calc(100% - 48px)";
+            width: ~'calc(100% - 48px)';
         }
     }
 
-    input[type="email"],
-    input[type="submit"],
-    input[type="text"],
+    input[type='email'],
+    input[type='submit'],
+    input[type='text'],
     select,
     textarea {
         border: none;
@@ -205,17 +218,17 @@ fieldset {
         line-height: 1.5;
         margin: 6px auto;
         padding: 12px 24px;
-        width: ~"calc(100% - 48px)";
+        width: ~'calc(100% - 48px)';
     }
 
-    input[type="submit"],
+    input[type='submit'],
     select {
         width: unset;
     }
 
-    input[type="submit"] {
+    input[type='submit'] {
         background-color: @dark-beige;
-        box-shadow: 0px 2px 0px rgba(0, 0, 0, .24);
+        box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.24);
     }
 }
 
@@ -260,7 +273,9 @@ fieldset {
     margin: 24px auto;
     max-width: 480px;
 
-    .fas, .far, .fab {
+    .fas,
+    .far,
+    .fab {
         font-size: 2.8rem;
         margin-right: 16px;
         text-align: right;
@@ -277,7 +292,6 @@ fieldset {
 }
 
 .top-nav {
-
     a {
         display: block;
         padding: 8px;
@@ -289,16 +303,13 @@ fieldset {
     }
 
     .btn-home {
-
     }
 
     .btn-book-your-adventure {
-
     }
 }
 
 .main-nav {
-
     a {
         color: @shadow;
         display: block;
@@ -319,7 +330,7 @@ fieldset {
 
 .page-header {
     color: @white;
-    
+
     overflow: hidden;
 
     header {
@@ -345,7 +356,6 @@ fieldset {
 }
 
 .page-body {
-
     > header {
         overflow: auto;
         padding: 48px 24px 0;
@@ -357,16 +367,17 @@ fieldset {
 
     article {
         display: grid;
-        grid-gap: .5vh;
+        grid-gap: 0.5vh;
         grid-auto-flow: dense;
         grid-template-columns: repeat(12, 1fr);
-        margin-top: .5vh;
+        margin-top: 0.5vh;
 
         @media screen and (max-width: 768px) {
             display: block;
         }
 
-        .content-block, .gallery-container {
+        .content-block,
+        .gallery-container {
             grid-column: span 12;
         }
 
@@ -382,7 +393,6 @@ fieldset {
             }
 
             &.timeline {
-
                 p {
                     font-size: 1.4rem;
                     line-height: 1.4;
@@ -394,7 +404,7 @@ fieldset {
 
 .gallery-container {
     display: grid;
-    grid-gap: .5vh;
+    grid-gap: 0.5vh;
     grid-auto-flow: dense;
     grid-auto-rows: 18vw;
     grid-template-columns: repeat(auto-fill, minmax(24vw, 1fr));
@@ -404,8 +414,8 @@ fieldset {
     }
 
     .image-container {
-
-        &:first-of-type, &:nth-child(4n) {
+        &:first-of-type,
+        &:nth-child(4n) {
             grid-column: span 2;
             grid-row: span 2;
 
@@ -436,73 +446,12 @@ fieldset {
     }
 }
 
-@color-palette-a: #ffe7e3;
-@color-palette-b: #c59595;
-@color-palette-c: #6d693c;
-@color-palette-d: #7d5c46;
-
-@color-palette-primary: @color-palette-a;
-@color-palette-secondary: @color-palette-b;
-@color-palette-tertiary: @color-palette-c;
-@color-palette-quaternary: @color-palette-d;
-
-.color-palette-section {
-    display: flex;
-    margin: 24px auto;
-    max-width: 480px;
-
-    .color-palette-container {
-        text-align: center;
-        width: 100%;
-    }
-
-    .color-palette-shade {
-        background-color: transparent;
-        border: 3px white solid;
-        border-radius: 50%;
-        height: 72px;
-        margin: auto;
-        width: 72px;
-
-        &.primary {
-            background-color: @color-palette-primary;
-        }
-
-        &.secondary {
-            background-color: @color-palette-secondary;
-        }
-
-        &.tertiary {
-            background-color: @color-palette-tertiary;
-        }
-
-        &.quaternary {
-            background-color: @color-palette-quaternary;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        display: block;
-
-        .color-palette-shade {
-            border-radius: 4px;
-            width: 100%;
-        }
-    }
-
-    p {
-        font-size: 1.4rem;
-        margin: 6px;
-    }
-}
-
 .page {
-
     &.show {
         opacity: 1;
         transition-duration: 1s;
     }
-    
+
     &.delete {
         height: 0;
         overflow: hidden;
@@ -510,32 +459,29 @@ fieldset {
     }
 
     &.home {
-
         .page-header header {
             background-image: url('../images/alexis-ray-engagement-29.jpg');
         }
     }
-    
+
     &.accommodations {
-    
         .page-header header {
             background-image: url('../images/alexis-ray-engagement-24.jpg');
         }
     }
-    
+
     &.getting-there {
-    
         .page-header header {
             background-image: url('../images/alexis-ray-engagement-32.jpg');
         }
 
-        .content-block, .gallery-container {
+        .content-block,
+        .gallery-container {
             grid-column: span 4;
         }
     }
-    
+
     &.things-to-do {
-    
         .page-header header {
             background-image: url('../images/alexis-ray-engagement-37.jpg');
         }
@@ -544,37 +490,32 @@ fieldset {
             grid-column: span 6;
         }
     }
-    
+
     &.book-your-adventure {
-    
         .page-header header {
             background-image: url('../images/alexis-ray-engagement-29.jpg');
         }
     }
-    
+
     &.wedding-schedule {
-    
         .page-header header {
             background-image: url('../images/alexis-ray-engagement-49.jpg');
         }
     }
-    
+
     &.gallery {
-    
         .page-header header {
             background-image: url('../images/alexis-ray-engagement-32.jpg');
         }
     }
-    
+
     &.contact-us {
-    
         .page-header header {
             background-image: url('../images/alexis-ray-engagement-102.jpg');
         }
     }
-    
+
     &.faqs {
-    
         .page-header header {
             background-image: url('../images/alexis-ray-engagement-66.jpg');
         }
