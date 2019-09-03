@@ -1,6 +1,6 @@
 class ScreenArea extends React.Component {
     state = {
-        currentPage: 'wedding-schedule',
+        currentPage: 'schedule',
         menuToggleState: false,
     };
 
@@ -31,7 +31,7 @@ class ScreenArea extends React.Component {
 
                 {this.state.currentPage === 'our-history' ? <Gallery /> : ''}
 
-                {this.state.currentPage === 'wedding-schedule' ? (
+                {this.state.currentPage === 'schedule' ? (
                     <WeddingSchedule />
                 ) : (
                     ''
@@ -111,7 +111,7 @@ const MainNav = props => {
 
                 <button
                     onClick={() => {
-                        props.fnLoadCurrentPage('wedding-schedule');
+                        props.fnLoadCurrentPage('schedule');
                         props.fnMenuToggle();
                     }}
                 >
@@ -1106,10 +1106,10 @@ const WeddingSchedule = () => {
                         </div>
 
                         <p>
-                            Join us on scheduled activities for Friday,
-                            Saturday, and Sunday! You may do your own excursions
-                            for the rest of the time, or you are welcome to join
-                            us on ours! This is what we have planned...
+                            Join us on scheduled activities for all the days!
+                            You may do your own excursions for the rest of the
+                            time, or you are welcome to join us on ours! This is
+                            what we have planned...
                         </p>
 
                         <header>
