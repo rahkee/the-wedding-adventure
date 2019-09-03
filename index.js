@@ -667,9 +667,11 @@ const Gallery = () => {
                     </div>
                 </article>
 
-                <header>
-                    <h2>Engagement Photos</h2>
-                </header>
+                <div class="page-header">
+                    <header>
+                        <h2>Engagement Photos</h2>
+                    </header>
+                </div>
 
                 <article>
                     <div className="content-block text-center">
@@ -684,9 +686,12 @@ const Gallery = () => {
                         <p>
                             <strong>Photographers</strong>
                             <br />
-                            Jeff and Cat Change
+                            Jeff and Cat Chang
                             <br />
-                            <a href="http://www.theapartmentphotography.com/">
+                            <a
+                                href="http://www.theapartmentphotography.com/"
+                                target="_blank"
+                            >
                                 The Apartment Photography
                             </a>
                         </p>
@@ -699,133 +704,64 @@ const Gallery = () => {
 
                     <div className="gallery-container">
                         <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
+                            <img
+                                src="images/alexis-ray-engagement-24.jpg"
+                                alt=""
+                            />
                         </div>
                         <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
+                            <img
+                                src="images/alexis-ray-engagement-29.jpg"
+                                alt=""
+                            />
                         </div>
                         <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
+                            <img
+                                src="images/alexis-ray-engagement-32.jpg"
+                                alt=""
+                            />
                         </div>
                         <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
+                            <img
+                                src="images/alexis-ray-engagement-33.jpg"
+                                alt=""
+                            />
                         </div>
                         <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
+                            <img
+                                src="images/alexis-ray-engagement-37.jpg"
+                                alt=""
+                            />
                         </div>
                         <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
+                            <img
+                                src="images/alexis-ray-engagement-49.jpg"
+                                alt=""
+                            />
                         </div>
                         <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
+                            <img
+                                src="images/alexis-ray-engagement-66.jpg"
+                                alt=""
+                            />
                         </div>
                         <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
+                            <img
+                                src="images/alexis-ray-engagement-83.jpg"
+                                alt=""
+                            />
                         </div>
                         <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
+                            <img
+                                src="images/alexis-ray-engagement-85.jpg"
+                                alt=""
+                            />
                         </div>
                         <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
-                        </div>
-                        <div className="image-container">
-                            <img src="images/x.jpg" alt="" />
+                            <img
+                                src="images/alexis-ray-engagement-102.jpg"
+                                alt=""
+                            />
                         </div>
                     </div>
                 </article>
@@ -912,6 +848,7 @@ const GettingThere = () => {
                             <a
                                 href="https://g.page/sunwolfbc?share"
                                 title="Directions to Sunwolf"
+                                target="_blank"
                             >
                                 Sunwolf
                             </a>
@@ -922,7 +859,11 @@ const GettingThere = () => {
 
                         <h6>Address</h6>
                         <p>
-                            <a href="https://g.page/sunwolfbc?share">
+                            <a
+                                href="https://g.page/sunwolfbc?share"
+                                title="Directions to Sunwolf"
+                                target="_blank"
+                            >
                                 70002 Squamish Valley Rd, Brackendale, BC V0N
                                 1H0, Canada
                             </a>
@@ -956,6 +897,7 @@ const Lodging = () => {
                             <a
                                 href="https://g.page/sunwolfbc?share"
                                 title="Directions to Sunwolf"
+                                target="_blank"
                             >
                                 70002 Squamish Valley Rd, Brackendale, BC V0N
                                 1H0, Canada
@@ -1127,6 +1069,7 @@ const WeddingSchedule = () => {
                             <a
                                 href="https://g.page/sunwolfbc?share"
                                 title="Directions to Sunwolf"
+                                target="_blank"
                             >
                                 Sunwolf
                             </a>
@@ -1135,14 +1078,44 @@ const WeddingSchedule = () => {
                         <h6>4:00pm</h6>
                         <p>Check-in to Sunwolf</p>
 
-                        <h6>BBQ and Rehearsals</h6>
+                        <h6>BBQ Cook Out!</h6>
                         <p>BBQ provided by Cecilia Mopera and Robert Tejada</p>
 
                         <p className="small">
                             If you would like to cook your own bbq, the nearest
-                            grocery store is Kitchen Quickies, Save on Foods,
-                            Craig's Your Independent Grocer and Brackendale
-                            General Store.
+                            grocery store is{' '}
+                            <a
+                                href="https://goo.gl/maps/PyPes1isMnJAWPTb9"
+                                title="Directions to Kitchen Quickies"
+                                target="_blank"
+                            >
+                                Kitchen Quickies
+                            </a>
+                            ,{' '}
+                            <a
+                                href="https://goo.gl/maps/Wpo7moB6DTJR9vhg8"
+                                title="Directions to Save on Foods"
+                                target="_blank"
+                            >
+                                Save on Foods
+                            </a>
+                            ,{' '}
+                            <a
+                                href="https://goo.gl/maps/oKuJmHEFPzWhGnoa8"
+                                title="Directions to Craig's Your Independent Grocer"
+                                target="_blank"
+                            >
+                                Craig's Your Independent Grocer
+                            </a>{' '}
+                            and{' '}
+                            <a
+                                href="https://goo.gl/maps/RhrKwBC7aL6zZq666"
+                                title="Directions to Brackendale General Store"
+                                target="_blank"
+                            >
+                                Brackendale General Store
+                            </a>
+                            .
                         </p>
                     </div>
                     <div className="gallery-container">
@@ -1167,17 +1140,24 @@ const WeddingSchedule = () => {
                             <hr />
                         </div>
 
-                        <h6>10:30am</h6>
-                        <p>
-                            Brunch at Fergie's Cafe located inside the Sunwolf
-                            property
-                        </p>
-
                         <h6>4:00pm</h6>
                         <p>Wedding Ceremony</p>
 
-                        <h6>6:00pm</h6>
-                        <p>Dinner and Reception</p>
+                        <h6>4:30pm</h6>
+                        <p>Cocktail and Hors D'oeuvres</p>
+
+                        <h6>5:50pm</h6>
+                        <p>Guests Seated for Dinner</p>
+
+                        <h6>6:00</h6>
+                        <p>Dinner and Dance</p>
+
+                        <h6>Afterparty</h6>
+                        <p>
+                            Get comfortable! The bar service and the band end at
+                            around 10:00pm but we'll hanging out well after
+                            that.
+                        </p>
 
                         <p className="small">
                             NOTE: The entire property is ours for the weekend so
@@ -1208,26 +1188,27 @@ const WeddingSchedule = () => {
 
                         <h6>Morning</h6>
                         <p>
+                            Let's check out{' '}
                             <a
-                                href="https://www.seatoskygondola.com/"
-                                title="Visit the Sea-to-Sky Gondola Website"
+                                href="https://goo.gl/maps/zVT5Dsm3GEcarQkU9"
+                                title="Directions to Capilano Suspension Bridge"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                Sea-to-Sky Gondola
+                                Capilano Suspension Bridge
                             </a>{' '}
                             for brunch and nature walk
                         </p>
 
                         <h6>Afternoon</h6>
                         <p>
-                            Paddleboarding and kayaking on{' '}
+                            And then let's get to the top of{' '}
                             <a
-                                href="http://seatoskyparks.com/parks/alice-lake/"
+                                href="https://goo.gl/maps/9SMDZkFsPpDaZVjm6"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                Alice Lake
+                                Grouse Mountain
                             </a>
                         </p>
                     </div>
@@ -1248,53 +1229,8 @@ const WeddingSchedule = () => {
                             <hr />
                         </div>
 
-                        <h6>TBD</h6>
-                        <p>
-                            <a
-                                href="https://squamishadventure.com/portfolio/ziptreck-zipline-tours-squamish-whistler/"
-                                title="Visit the Sea-to-Sky Gondola Website"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Ziptrack and Zipline Tours, Squamish Adventures
-                            </a>
-                        </p>
-                    </div>
-                    <div className="gallery-container">
-                        <div className="image-container">
-                            <img
-                                src="images/squamish-b-shots-1613.jpg"
-                                alt=""
-                            />
-                        </div>
-                    </div>
-                </article>
-
-                <article>
-                    <div className="content-block">
-                        <header>
-                            <h3>Day Five</h3>
-                            <h4>Tuesday, September 24th</h4>
-                        </header>
-
-                        <div className="divider">
-                            <i className="fas fa-tree" />
-                            <hr />
-                        </div>
-
-                        <h6>9:00am</h6>
-                        <p>Whale Watch</p>
-
                         <h6>11:00am</h6>
                         <p>Check Out from Sunwolf Lodging</p>
-                    </div>
-                    <div className="gallery-container">
-                        <div className="image-container">
-                            <img
-                                src="images/alexis-ray-engagement-85.jpg"
-                                alt=""
-                            />
-                        </div>
                     </div>
                 </article>
             </div>
