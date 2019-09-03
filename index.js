@@ -1,6 +1,6 @@
 class ScreenArea extends React.Component {
     state = {
-        currentPage: 'schedule',
+        currentPage: 'home',
         menuToggleState: false,
     };
 
