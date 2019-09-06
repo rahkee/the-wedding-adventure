@@ -200,7 +200,7 @@ const ContactUs = () => {
                         <h5>On the wedding day, please contact...</h5>
 
                         <div>
-                            <p>Maid of "Honor"</p>
+                            <p>The Bridesmaid</p>
                             <h3>Carissa Sarreal</h3>
                             <p>
                                 <a href="tel:929-316-2323">(929) 316-2323</a>
@@ -1186,21 +1186,32 @@ const WeddingSchedule = () => {
                             <hr />
                         </div>
 
-                        <h6>Morning</h6>
+                        <h6>Morning to Mid-Afternoon</h6>
                         <p>
                             Let's check out{' '}
                             <a
-                                href="https://goo.gl/maps/zVT5Dsm3GEcarQkU9"
-                                title="Directions to Capilano Suspension Bridge"
+                                href="https://goo.gl/maps/RRNvPxyBQuM5eazK8"
+                                title="Directions to Bowen Island"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                Capilano Suspension Bridge
+                                Bowen Island
                             </a>{' '}
-                            for brunch and nature walk
+                            for brunch and nature walk. We will be there from
+                            10:00am to around 3:00pm
                         </p>
 
-                        <h6>Afternoon</h6>
+                        <p>
+                            Here's{' '}
+                            <a
+                                href="http://nectaryogabnb.ca/getting-to-bowen/?fbclid=IwAR0Y1a9ERnAwL8jXrxFQjr0Jwc8Suo1e1QpbLSmgncqAujJBcxAsHkjYgDo"
+                                title="Directions to Bowen Island"
+                            >
+                                how to get to Bowen Island
+                            </a>
+                        </p>
+
+                        <h6>Mid-to-Late Afternoon</h6>
                         <p>
                             And then let's get to the top of{' '}
                             <a
