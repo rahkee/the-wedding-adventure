@@ -50,6 +50,35 @@ class ScreenArea extends React.Component {
 const MainNav = props => {
     return (
         <React.Fragment>
+            <div
+                className={`main-nav-notify ${
+                    props.menuState
+                        ? 'main-nav-notify-opened'
+                        : 'main-nav-notify-closed'
+                }`}
+            >
+                <div className="weather-info">
+                    <i class="fas fa-cloud-sun"></i>
+                    <a
+                        href="https://weather.gc.ca/city/pages/bc-50_metric_e.html"
+                        title="Weather Information in Squamish, British Columbia"
+                    >
+                        View the Weather Conditions
+                    </a>{' '}
+                    <span>for Squamish, British Columbia</span>
+                </div>
+
+                <p className="important-info">
+                    <span className="box-header">IMPORTANT</span>
+                    <strong>Please! No phones during the ceremony.</strong>
+                    <br />
+                    The bride and groom humbly request that all phones are
+                    silenced and put away during the ceremony. They have hired
+                    professionals to cover this very special moment and feel
+                    that cellphones take the magic away. Please honor this
+                    request.
+                </p>
+            </div>
             <nav
                 className={`main-nav ${
                     props.menuState ? 'main-nav-opened' : 'main-nav-closed'
