@@ -58,7 +58,6 @@ const MainNav = props => {
                 }`}
             >
                 <div className="weather-info">
-                    <i class="fas fa-cloud-sun"></i>
                     <a
                         href="https://weather.gc.ca/city/pages/bc-50_metric_e.html"
                         title="Weather Information in Squamish, British Columbia"
