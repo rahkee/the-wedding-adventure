@@ -145,6 +145,14 @@ const MainNav = props => {
                 >
                     Schedule
                 </button>
+
+                <a
+                    href="images/table-seating.jpg"
+                    title="Seating Arrangements"
+                    target="_blank"
+                >
+                    Where in the World am I Sitting? <span>Table Seating</span>
+                </a>
             </nav>
         </React.Fragment>
     );
