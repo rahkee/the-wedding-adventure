@@ -94,6 +94,24 @@ const MainNav = props => {
 
                 <button
                     onClick={() => {
+                        props.fnLoadCurrentPage('schedule');
+                        props.fnMenuToggle();
+                    }}
+                >
+                    Schedule
+                </button>
+
+                <a
+                    href="images/table-seating.jpg"
+                    title="Seating Arrangements"
+                    target="_blank"
+                    className="table-seating-link"
+                >
+                    Where in the World am I Sitting?
+                </a>
+
+                <button
+                    onClick={() => {
                         props.fnLoadCurrentPage('contact-us');
                         props.fnMenuToggle();
                     }}
@@ -136,23 +154,6 @@ const MainNav = props => {
                 >
                     Our History
                 </button>
-
-                <button
-                    onClick={() => {
-                        props.fnLoadCurrentPage('schedule');
-                        props.fnMenuToggle();
-                    }}
-                >
-                    Schedule
-                </button>
-
-                <a
-                    href="images/table-seating.jpg"
-                    title="Seating Arrangements"
-                    target="_blank"
-                >
-                    Where in the World am I Sitting? <span>Table Seating</span>
-                </a>
             </nav>
         </React.Fragment>
     );

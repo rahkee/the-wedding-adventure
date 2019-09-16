@@ -110,6 +110,15 @@ img {
   grid-row: 1 / -1;
   width: 100%;
 }
+.table-seating-link {
+  color: #2a2a2a;
+  font-size: 1.8rem;
+  display: block;
+  text-align: center;
+}
+.table-seating-link:hover {
+  color: #a85213;
+}
 .color-palette-section {
   display: block;
   margin: 24px auto;
@@ -194,7 +203,7 @@ img {
   margin-top: -48px;
 }
 .main-nav.main-nav-closed {
-  transform: translateY(268px);
+  transform: translateY(295px);
 }
 .main-nav-notify {
   background-image: linear-gradient(#a2a39d 60%, transparent);
@@ -233,7 +242,8 @@ img {
 }
 .main-nav-notify .important-info strong {
   display: inline-block;
-  margin-bottom: 8px;
+  margin-top: 4px;
+  margin-bottom: 4px;
   line-height: normal;
 }
 .weather-info {
